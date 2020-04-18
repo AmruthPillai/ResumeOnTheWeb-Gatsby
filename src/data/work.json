@@ -1,0 +1,42 @@
+[
+  {
+    "icon": "../images/work/grover.png",
+    "title": "Grover GmbH",
+    "subtitle": "Senior Frontend Developer",
+    "period": "Apr '20 - current",
+    "location": "Berlin, Germany",
+    "specialization": "ReactJS, Frontend Javascript Frameworks"
+  },
+  {
+    "icon": "../images/work/dhiyo.png",
+    "title": "GoDhiyo Solutions Pvt. Ltd.",
+    "subtitle": "Full Stack Developer and Designer",
+    "period": "Jul '18 - Mar '20",
+    "location": "Bengaluru, India",
+    "specialization": "Angular, Node Python, Figma, Product Design"
+  },
+  {
+    "icon": "../images/work/betsol.png",
+    "title": "Betsol Software (India) Pvt. Ltd.",
+    "subtitle": "Full Stack Developer Intern",
+    "period": "Jan '18 - Mar '18",
+    "location": "Bengaluru, India",
+    "specialization": "Full Stack Javascript, AngularJS, Node, MongoDB"
+  },
+  {
+    "icon": "../images/work/grabhouse.png",
+    "title": "Grabhouse Pvt. Ltd.",
+    "subtitle": "Web Developer Intern",
+    "period": "Jan '16 - Feb '16",
+    "location": "Bengaluru, India",
+    "specialization": "Python Scripting, Yii Framework (PHP), WordPress"
+  },
+  {
+    "icon": "../images/work/cognitiveclouds.png",
+    "title": "Cognitive Clouds Pvt. Ltd.",
+    "subtitle": "Visual Designer Intern",
+    "period": "Jan '14 - Feb '14",
+    "location": "Bengaluru, India",
+    "specialization": "Adobe Photoshop CC, Adobe Illustrator CC"
+  }
+]

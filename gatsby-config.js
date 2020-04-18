@@ -41,6 +41,7 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -48,7 +49,14 @@ module.exports = {
         path: path.join(__dirname, `src`, `markdown`),
       },
     },
-    `gatsby-transformer-remark`,
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: path.join(__dirname, `src`, `data`),
+      },
+    },
     {
       resolve: `gatsby-plugin-postcss`,
       options: {

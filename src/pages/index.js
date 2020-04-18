@@ -3,6 +3,7 @@ import Wrapper from "../components/Wrapper";
 import AboutMe from "../sections/AboutMe";
 import Education from "../sections/Education";
 import Hero from "../sections/Hero";
+import Work from "../sections/Work";
 
 const IndexPage = () => {
   return (
@@ -12,7 +13,7 @@ const IndexPage = () => {
         <AboutMe />
         <div className="grid grid-cols-2">
           <Education />
-          <Education />
+          <Work />
         </div>
       </div>
     </Wrapper>

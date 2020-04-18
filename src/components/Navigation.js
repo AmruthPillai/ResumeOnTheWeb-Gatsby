@@ -46,7 +46,12 @@ const Navigation = () => {
 
   return (
     <div className={`${styles.container} animated fadeInLeft`}>
-      <div className="cursor-pointer" onClick={scrollToTop}>
+      <div
+        className="cursor-pointer"
+        onClick={scrollToTop}
+        data-tip="Go to Top"
+        data-place="right"
+      >
         <GatsbyImage {...data.icon.childImageSharp} />
       </div>
       <div className="flex flex-col justify-center items-center">

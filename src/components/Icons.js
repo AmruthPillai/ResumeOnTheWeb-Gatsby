@@ -16,7 +16,13 @@ import {
 } from "react-icons/fa";
 import { GoTools } from "react-icons/go";
 import { IoIosDocument, IoIosJournal } from "react-icons/io";
-import { MdMenu, MdPerson, MdSchool, MdWork } from "react-icons/md";
+import {
+  MdLocationOn,
+  MdMenu,
+  MdPerson,
+  MdSchool,
+  MdWork,
+} from "react-icons/md";
 
 export {
   FaInstagram,
@@ -41,4 +47,5 @@ export {
   MdPerson,
   MdWork,
   MdSchool,
+  MdLocationOn,
 };
