@@ -52,7 +52,7 @@ const Education = () => {
                     className="w-8 h-8"
                     {...node.icon.childImageSharp}
                   />
-                  <h5 className="mt-3 font-semibold">{node.title}</h5>
+                  <h6 className="mt-3 font-semibold">{node.title}</h6>
                   <h6 className="text-sm">{node.subtitle}</h6>
                   <h6 className="mt-2 text-xs">({node.period})</h6>
                 </div>

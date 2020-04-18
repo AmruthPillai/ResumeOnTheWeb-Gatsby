@@ -3,6 +3,7 @@ import GatsbyImage from "gatsby-image";
 import React from "react";
 import Heading from "../components/Heading";
 import { GoTools } from "../components/Icons";
+import styles from "./Skills.module.css";
 
 const Skills = () => {
   const data = useStaticQuery(graphql`
@@ -32,7 +33,7 @@ const Skills = () => {
         {data.allSkillsJson.edges.map(({ node }, index) => (
           <div
             key={node.name}
-            className="border border-trans-gray pl-5 py-3 rounded-lg mr-5 mb-5 wow fadeIn"
+            className={`${styles.skill} wow fadeIn`}
             style={{
               animationDelay: `${index * 100 + 100}ms`,
             }}

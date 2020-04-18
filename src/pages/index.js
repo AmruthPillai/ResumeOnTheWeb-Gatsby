@@ -5,6 +5,7 @@ import Education from "../sections/Education";
 import Hero from "../sections/Hero";
 import Skills from "../sections/Skills";
 import Work from "../sections/Work";
+import Projects from "../sections/Projects";
 
 const IndexPage = () => {
   return (
@@ -17,6 +18,7 @@ const IndexPage = () => {
           <Work />
         </div>
         <Skills />
+        <Projects />
       </div>
     </Wrapper>
   );
