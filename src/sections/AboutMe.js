@@ -17,7 +17,7 @@ const AboutMe = () => {
       <Heading icon={MdPerson} title="About Me" />
 
       <div
-        className="text-justify w-3/4 wow bounceInUp"
+        className="text-justify w-3/4 wow fadeIn"
         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
       />
     </div>

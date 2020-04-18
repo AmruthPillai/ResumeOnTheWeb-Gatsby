@@ -3,7 +3,7 @@
 }
 
 .container > div {
-  @apply w-6 h-6 rounded-full flex justify-center items-center;
+  @apply w-6 h-6 cursor-pointer rounded-full flex justify-center items-center pt-px;
 }
 
 .container > div:first-child {

@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
 import React from "react";
-import { scroller } from "react-scroll";
+import { scroller, animateScroll as scroll } from "react-scroll";
 import sections from "../data/sections";
 import { FaInfoCircle, MdMenu } from "./Icons";
 import styles from "./Navigation.module.css";
@@ -19,10 +19,17 @@ const Navigation = () => {
     }
   `);
 
+  const scrollToTop = () =>
+    scroll.scrollToTop({
+      delay: 50,
+      duration: 600,
+      smooth: "easeInOutCubic",
+    });
+
   const scrollTo = id =>
     scroller.scrollTo(id, {
-      delay: 100,
-      duration: 800,
+      delay: 50,
+      duration: 600,
       smooth: "easeInOutCubic",
     });
 
@@ -38,8 +45,8 @@ const Navigation = () => {
   );
 
   return (
-    <div className={styles.container}>
-      <div>
+    <div className={`${styles.container} animated fadeInLeft`}>
+      <div className="cursor-pointer" onClick={scrollToTop}>
         <GatsbyImage {...data.icon.childImageSharp} />
       </div>
       <div className="flex flex-col justify-center items-center">

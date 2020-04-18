@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Amruth Pillai <im.amruth@gmail.com>",
   "dependencies": {
-    "animate.css": "^3.7.2",
     "gatsby": "2.20.24",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-google-fonts": "^1.0.1",

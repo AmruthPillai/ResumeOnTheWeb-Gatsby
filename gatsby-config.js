@@ -65,7 +65,7 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         tailwind: true,
-        purgeOnly: [`src/css/tailwind.css`],
+        purgeOnly: [`src/css/animate.css`, `src/css/tailwind.css`],
       },
     },
     `gatsby-plugin-offline`,
