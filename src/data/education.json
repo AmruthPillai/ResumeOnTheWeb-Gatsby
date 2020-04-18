@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "https://amruthpillai.com/assets/education/dsi.png",
+    "title": "Dayananda Sagar College of Engineering",
+    "subtitle": "Bachelor's Degree in Computer Science & Engineering",
+    "period": "2015 - 2018"
+  },
+  {
+    "icon": "https://amruthpillai.com/assets/education/dsi.png",
+    "title": "Dayananda Sagar Institute of Technology",
+    "subtitle": "Diploma in Computer Science & Engineering",
+    "period": "2012 - 2015"
+  },
+  {
+    "icon": "https://amruthpillai.com/assets/education/jvvp.png",
+    "title": "Jnana Vijnana Vidyapeetha",
+    "subtitle": "High School, CBSE",
+    "period": "2008 - 2011"
+  },
+  {
+    "icon": "https://amruthpillai.com/assets/education/sams.png",
+    "title": "Sri Aurobindo Memorial School",
+    "subtitle": "Elementary & Primary School, CBSE",
+    "period": "2000 - 2008"
+  }
+]

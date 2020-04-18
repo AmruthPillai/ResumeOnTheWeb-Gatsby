@@ -21,7 +21,7 @@ const AboutMe = () => {
   `);
 
   return (
-    <div id="about-me">
+    <section id="about-me">
       <Heading icon={MdPerson} title="About Me" />
 
       <div className="grid grid-cols-6 gap-12 items-center">
@@ -33,7 +33,7 @@ const AboutMe = () => {
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

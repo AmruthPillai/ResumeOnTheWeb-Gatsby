@@ -1,7 +1,8 @@
 import React from "react";
 import Wrapper from "../components/Wrapper";
-import Hero from "../sections/Hero";
 import AboutMe from "../sections/AboutMe";
+import Education from "../sections/Education";
+import Hero from "../sections/Hero";
 
 const IndexPage = () => {
   return (
@@ -9,6 +10,10 @@ const IndexPage = () => {
       <div className="container">
         <Hero />
         <AboutMe />
+        <div className="grid grid-cols-2">
+          <Education />
+          <Education />
+        </div>
       </div>
     </Wrapper>
   );

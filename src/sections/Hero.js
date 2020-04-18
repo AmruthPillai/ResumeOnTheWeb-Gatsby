@@ -33,7 +33,7 @@ const Hero = () => {
   `);
 
   return (
-    <section className="min-h-screen flex items-center container">
+    <section id="hero" className="min-h-screen flex items-center container">
       <div className="w-full grid grid-cols-5 gap-16 items-center">
         <div className="col-span-2">
           <GatsbyImage {...data.photo.childImageSharp} />

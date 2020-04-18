@@ -43,6 +43,10 @@ p {
   @apply leading-relaxed pb-4;
 }
 
+section {
+  padding: 50px 0;
+}
+
 .flex-center {
   @apply flex justify-center items-center;
 }
