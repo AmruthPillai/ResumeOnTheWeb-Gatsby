@@ -14,7 +14,7 @@ const Subtitle = () => (
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       photo: file(relativePath: { eq: "photo.png" }) {
         childImageSharp {
           fluid(maxWidth: 512) {
