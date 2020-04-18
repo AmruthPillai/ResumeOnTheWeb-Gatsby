@@ -14,7 +14,7 @@ const Social = () => {
             data-tip={x.title}
             data-place="bottom"
           >
-            <Icon size="0.9em" />
+            <Icon color="#FFF" size="0.9em" />
           </div>
         );
       })}

@@ -12,6 +12,7 @@ module.exports = {
         facebook: "#3B5998",
         twitter: "#1DA1F2",
         google: "#DB4437",
+        "trans-gray": "rgba(160, 174, 192, 0.1)",
       },
     },
   },

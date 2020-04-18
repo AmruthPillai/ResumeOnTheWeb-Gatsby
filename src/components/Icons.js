@@ -22,6 +22,7 @@ import {
   MdPerson,
   MdSchool,
   MdWork,
+  MdMoreHoriz,
 } from "react-icons/md";
 
 export {
@@ -48,4 +49,5 @@ export {
   MdWork,
   MdSchool,
   MdLocationOn,
+  MdMoreHoriz,
 };

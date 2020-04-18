@@ -1,10 +1,12 @@
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
-import React from "react";
+import React, { useState } from "react";
 import Heading from "../components/Heading";
-import { MdWork, MdLocationOn } from "../components/Icons";
+import { MdWork, MdLocationOn, MdMoreHoriz } from "../components/Icons";
 
 const Work = () => {
+  const [max, setMax] = useState(3);
+
   const data = useStaticQuery(graphql`
     {
       allWorkJson {
@@ -36,6 +38,8 @@ const Work = () => {
         <div className="w-1 bg-gray-500 rounded-full ml-6 opacity-25" />
         <div className="-ml-2">
           {data.allWorkJson.edges.map(({ node }, index) => {
+            if (index >= max) return null;
+
             return (
               <div
                 key={node.title}
@@ -74,6 +78,19 @@ const Work = () => {
           })}
         </div>
       </div>
+
+      {max <= 3 && (
+        <div className="ml-12 mt-4 rounded-lg py-2 flex">
+          <div
+            className="px-4"
+            data-tip="Load More"
+            data-place="right"
+            onClick={() => setMax(6)}
+          >
+            <MdMoreHoriz size="1.5rem" />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

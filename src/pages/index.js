@@ -3,6 +3,7 @@ import Wrapper from "../components/Wrapper";
 import AboutMe from "../sections/AboutMe";
 import Education from "../sections/Education";
 import Hero from "../sections/Hero";
+import Skills from "../sections/Skills";
 import Work from "../sections/Work";
 
 const IndexPage = () => {
@@ -15,6 +16,7 @@ const IndexPage = () => {
           <Education />
           <Work />
         </div>
+        <Skills />
       </div>
     </Wrapper>
   );
