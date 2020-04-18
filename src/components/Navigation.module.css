@@ -1,0 +1,30 @@
+.container {
+  @apply fixed inset-y-0 left-0 flex flex-col justify-between p-4;
+}
+
+.container .menu {
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  @apply opacity-100;
+  @apply transition-all duration-300;
+}
+
+.container .section-links > div {
+  cursor: pointer;
+  margin: -1em 0;
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  @apply opacity-0;
+  @apply transition-all duration-300;
+}
+
+.container:hover .menu {
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  @apply opacity-0;
+  @apply transition-all duration-300;
+}
+
+.container:hover .section-links > div {
+  padding: 1em 0;
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  @apply opacity-100;
+  @apply transition-all duration-300;
+}

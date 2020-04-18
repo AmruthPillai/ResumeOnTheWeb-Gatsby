@@ -1,7 +1,18 @@
-// See https://tailwindcss.com/docs/configuration for details
 module.exports = {
-  theme: {},
-  variants: {},
-  // https://github.com/tailwindcss/custom-forms
-  plugins: [require("@tailwindcss/custom-forms")],
+  theme: {
+    container: {
+      center: true,
+    },
+    extend: {
+      colors: {
+        instagram: "#E1306C",
+        linkedin: "#2867B2",
+        github: "#211F1F",
+        dribbble: "#EA4C89",
+        facebook: "#3B5998",
+        twitter: "#1DA1F2",
+        google: "#DB4437",
+      },
+    },
+  },
 };

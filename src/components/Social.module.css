@@ -1,0 +1,19 @@
+.container {
+  @apply my-10 flex;
+}
+
+.container > div {
+  @apply w-6 h-6 rounded-full flex justify-center items-center;
+}
+
+.container > div:first-child {
+  @apply mr-3;
+}
+
+.container > div:last-child {
+  @apply ml-3;
+}
+
+.container > div:not(:first-child):not(:last-child) {
+  @apply mx-3;
+}
