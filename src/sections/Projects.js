@@ -1,9 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
 import React from "react";
-import { FaGithub, FaLink } from "react-icons/fa";
 import Heading from "../components/Heading";
-import { FaDev } from "../components/Icons";
+import { FaDev, FaGithub, FaLink } from "../components/Icons";
 import styles from "./Projects.module.css";
 
 const Projects = () => {
@@ -29,8 +28,6 @@ const Projects = () => {
       }
     }
   `);
-
-  console.log(styles);
 
   return (
     <section id="projects">

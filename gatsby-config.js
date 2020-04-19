@@ -32,6 +32,12 @@ module.exports = {
         display: `swap`,
       },
     },
+    {
+      resolve: `gatsby-source-dev`,
+      options: {
+        username: `amruthpillai`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
