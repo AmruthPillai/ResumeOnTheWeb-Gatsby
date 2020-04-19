@@ -13,6 +13,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -79,9 +80,8 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         tailwind: true,
-        purgeOnly: [`src/css/animate.css`, `src/css/tailwind.css`],
+        purgeOnly: [`src/css/tailwind.css`],
       },
     },
-    `gatsby-plugin-offline`,
   ],
 };

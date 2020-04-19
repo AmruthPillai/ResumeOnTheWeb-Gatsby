@@ -19,6 +19,8 @@ const Navigation = () => {
     }
   `);
 
+  console.log(styles);
+
   const scrollToTop = () =>
     scroll.scrollToTop({
       delay: 50,
@@ -33,16 +35,20 @@ const Navigation = () => {
       smooth: "easeInOutCubic",
     });
 
-  const SectionLink = x => (
-    <div
-      key={x.id}
-      data-tip={x.title}
-      data-place="right"
-      onClick={() => scrollTo(x.id)}
-    >
-      {x.icon()}
-    </div>
-  );
+  const SectionLink = x => {
+    const Icon = x.icon;
+
+    return (
+      <div
+        key={x.id}
+        data-tip={x.title}
+        data-place="right"
+        onClick={() => scrollTo(x.id)}
+      >
+        <Icon />
+      </div>
+    );
+  };
 
   return (
     <div className={`${styles.container} animated fadeInLeft`}>

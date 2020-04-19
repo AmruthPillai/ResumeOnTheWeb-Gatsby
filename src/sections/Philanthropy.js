@@ -19,8 +19,6 @@ const Philanthropy = () => {
     }
   `);
 
-  console.log(data);
-
   return (
     <section id="philanthropy">
       <Heading icon={FaBoxOpen} title="Philanthropy" />

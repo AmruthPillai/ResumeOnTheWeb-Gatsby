@@ -24,7 +24,7 @@
     "react-helmet": "6.0.0",
     "react-icons": "^3.9.0",
     "react-scroll": "^1.7.16",
-    "react-tooltip": "^4.2.3",
+    "react-tooltip": "^4.2.5",
     "react-typist": "^2.0.5",
     "wowjs": "^1.1.3"
   },

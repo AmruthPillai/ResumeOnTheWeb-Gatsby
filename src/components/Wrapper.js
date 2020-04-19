@@ -15,10 +15,10 @@ const Wrapper = ({ children }) => {
 
   return (
     <div className={styles.container}>
+      <ReactTooltip />
       <SEO />
       <Navigation />
       {children}
-      <ReactTooltip />
     </div>
   );
 };

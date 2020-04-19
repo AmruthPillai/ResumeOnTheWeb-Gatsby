@@ -1,30 +1,33 @@
+.transition-default {
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
 .container {
   @apply fixed inset-y-0 left-0 flex flex-col justify-between p-4;
 }
 
 .container .menu {
-  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  @apply opacity-100;
-  @apply transition-all duration-300;
+  @apply opacity-100 transition-default;
 }
 
-.container .section-links > div {
+.container .section-links div {
+  height: 0;
   cursor: pointer;
-  margin-top: -1em;
-  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  @apply opacity-0;
-  @apply transition-all duration-300;
+  box-sizing: content-box;
+  @apply opacity-0 transition-default;
+}
+
+.container .section-links div:hover {
+  color: theme("colors.primary.500");
+  @apply transition-default;
 }
 
 .container:hover .menu {
-  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  @apply opacity-0;
-  @apply transition-all duration-300;
+  @apply opacity-0 transition-default;
 }
 
-.container:hover .section-links > div {
-  padding-top: 2em;
-  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  @apply opacity-100;
-  @apply transition-all duration-300;
+.container:hover .section-links div {
+  height: 1em;
+  padding: 0.6em 0;
+  @apply opacity-100 transition-default;
 }
