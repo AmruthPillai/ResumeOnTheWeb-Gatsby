@@ -4,6 +4,7 @@ import AboutMe from "../sections/AboutMe";
 import Blog from "../sections/Blog";
 import Education from "../sections/Education";
 import Hero from "../sections/Hero";
+import Languages from "../sections/Languages";
 import Projects from "../sections/Projects";
 import Skills from "../sections/Skills";
 import Work from "../sections/Work";
@@ -21,6 +22,7 @@ const IndexPage = () => {
         <Skills />
         <Projects />
         <Blog />
+        <Languages />
       </div>
     </Wrapper>
   );

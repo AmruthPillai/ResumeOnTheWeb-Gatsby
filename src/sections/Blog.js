@@ -28,8 +28,6 @@ const Blog = () => {
     }
   `);
 
-  console.log(data);
-
   return (
     <section id="blog">
       <Heading icon={IoIosJournal} title="Blog" />
