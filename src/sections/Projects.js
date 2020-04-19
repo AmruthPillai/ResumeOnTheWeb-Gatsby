@@ -11,6 +11,7 @@ const Projects = () => {
       allProjectsJson {
         edges {
           node {
+            id
             title
             description
             tags
@@ -36,7 +37,7 @@ const Projects = () => {
       <div className="flex overflow-x-auto pb-8">
         {data.allProjectsJson.edges.map(({ node }, index) => (
           <div
-            key={node.title}
+            key={node.id}
             className={`${styles.project} wow fadeIn`}
             style={{
               animationDelay: `${index * 300 + 300}ms`,

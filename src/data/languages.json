@@ -1,0 +1,27 @@
+[
+  {
+    "language": "English",
+    "text": "I'm pretty fluent in English.",
+    "translation": ""
+  },
+  {
+    "language": "Tamil",
+    "text": "தமிழ் என் தாய்மொழி.",
+    "translation": "Tamil is my native tongue."
+  },
+  {
+    "language": "Kannada",
+    "text": "ನನಗೆ ಕನ್ನಡ ಕೂಡ ಸ್ವಲ್ಪ ಬರುತ್ತೆ.",
+    "translation": "I know a bit of Kannada as well."
+  },
+  {
+    "language": "Hindi",
+    "text": "में मुश्किल से हिंदी बात करता हूँ|",
+    "translation": "I speak Hindi with some difficulty."
+  },
+  {
+    "language": "German",
+    "text": "Ich lerne Deutsch auf Duolingo.",
+    "translation": "I am currently learning German on Duolingo."
+  }
+]

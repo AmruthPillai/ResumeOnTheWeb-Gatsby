@@ -1,40 +1,26 @@
 import React, { useState } from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import Typist from "react-typist";
-import styles from "./Languages.module.css";
-
 import Heading from "../components/Heading";
 import { FaSignLanguage } from "../components/Icons";
-
-const languages = [
-  {
-    language: "English",
-    text: "I'm pretty fluent in English.",
-    translation: "",
-  },
-  {
-    language: "Tamil",
-    text: "தமிழ் என் தாய்மொழி.",
-    translation: "Tamil is my native tongue.",
-  },
-  {
-    language: "Kannada",
-    text: "ನನಗೆ ಕನ್ನಡ ಕೂಡ ಸ್ವಲ್ಪ ಬರುತ್ತೆ.",
-    translation: "I know a bit of Kannada as well.",
-  },
-  {
-    language: "Hindi",
-    text: "में मुश्किल से हिंदी बात करता हूँ|",
-    translation: "I speak Hindi with some difficulty.",
-  },
-  {
-    language: "German",
-    text: "Ich lerne Deutsch auf Duolingo.",
-    translation: "I am currently learning German on Duolingo.",
-  },
-];
+import styles from "./Languages.module.css";
 
 const Languages = () => {
   const [typistIndex, setTypistIndex] = useState(0);
+  const data = useStaticQuery(graphql`
+    {
+      allLanguagesJson {
+        edges {
+          node {
+            id
+            text
+            translation
+            language
+          }
+        }
+      }
+    }
+  `);
 
   return (
     <section id="languages">
@@ -47,13 +33,13 @@ const Languages = () => {
           cursor={{ show: false }}
           onTypingDone={() => setTypistIndex(typistIndex + 1)}
         >
-          {languages.map(({ text, translation }) => {
+          {data.allLanguagesJson.edges.map(({ node }) => {
             return (
-              <div key={text}>
-                <h1 className="text-4xl pb-2">{text}</h1>
-                <span className="italic">{translation}</span>
+              <div key={node.id}>
+                <h1 className="text-4xl pb-2">{node.text}</h1>
+                <span className="italic">{node.translation}</span>
                 <Typist.Backspace
-                  count={text.length + translation.length}
+                  count={node.text.length + node.translation.length}
                   delay={2000}
                 />
                 <Typist.Delay ms={300} />
@@ -64,10 +50,10 @@ const Languages = () => {
       </div>
 
       <div className="mt-12 flex">
-        {languages.map(({ language }) => {
+        {data.allLanguagesJson.edges.map(({ node }) => {
           return (
-            <div key={language} className={styles.language}>
-              <span>{language}</span>
+            <div key={node.id} className={styles.language}>
+              <span>{node.language}</span>
               <span className={styles.divider}>/</span>
             </div>
           );

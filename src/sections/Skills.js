@@ -11,6 +11,7 @@ const Skills = () => {
       allSkillsJson {
         edges {
           node {
+            id
             name
             tech
             icon {
@@ -32,7 +33,7 @@ const Skills = () => {
       <div className="grid grid-cols-4">
         {data.allSkillsJson.edges.map(({ node }, index) => (
           <div
-            key={node.name}
+            key={node.id}
             className={`${styles.skill} wow fadeIn`}
             style={{
               animationDelay: `${index * 100 + 100}ms`,

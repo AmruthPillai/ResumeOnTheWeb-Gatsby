@@ -10,6 +10,7 @@ const Education = () => {
       allEducationJson {
         edges {
           node {
+            id
             title
             subtitle
             period
@@ -36,7 +37,7 @@ const Education = () => {
           {data.allEducationJson.edges.map(({ node }, index) => {
             return (
               <div
-                key={node.title}
+                key={node.id}
                 className="py-4 flex wow fadeInDown"
                 style={{
                   animationDuration: `${index * 200 + 500}ms`,
