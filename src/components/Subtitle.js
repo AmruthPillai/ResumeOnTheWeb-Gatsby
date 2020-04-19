@@ -10,7 +10,7 @@ const Subtitle = ({ onDone }) => (
     className="my-2 flex h-32"
     onTypingDone={onDone}
   >
-    <code className="w-2/3 text-sm text-left leading-loose">
+    <code className="text-sm text-left leading-loose">
       <div>
         <span className="text-blue-600">const</span>{" "}
         <span className="text-orange-400">amruth</span>:{" "}

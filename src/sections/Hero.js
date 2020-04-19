@@ -1,11 +1,14 @@
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
-import React, { useState } from "react";
+import Parallax from "parallax-js";
+import React, { useRef, useState, useEffect } from "react";
 import ReactTooltip from "react-tooltip";
 import Social from "../components/Social";
 import Subtitle from "../components/Subtitle";
 
 const Hero = () => {
+  const parallaxRef = useRef(null);
+  const [parallax, setParallax] = useState(null);
   const [showSocial, setShowSocial] = useState(false);
   const data = useStaticQuery(graphql`
     {
@@ -26,11 +29,25 @@ const Hero = () => {
     }
   `);
 
+  useEffect(() => {
+    setParallax(
+      new Parallax(parallaxRef.current, {
+        invertX: false,
+        invertY: false,
+      }),
+    );
+    return () => {
+      parallax.destroy();
+    };
+  }, [parallaxRef]);
+
   return (
     <section id="hero" className="min-h-screen flex items-center container">
       <div className="w-full grid grid-cols-5 gap-16 items-center">
-        <div className="col-span-2">
-          <GatsbyImage {...data.photo.childImageSharp} />
+        <div ref={parallaxRef} className="col-span-2">
+          <div data-depth="0.4">
+            <GatsbyImage {...data.photo.childImageSharp} />
+          </div>
         </div>
         <div className="col-span-3">
           <GatsbyImage className="h-32" {...data.logo.childImageSharp} />
