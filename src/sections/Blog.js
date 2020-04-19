@@ -45,7 +45,7 @@ const Blog = () => {
               href={node.article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full h-48 relative flex-center cursor-pointer"
+              className="w-full h-48 relative flex-center cursor-pointer rounded-lg shadow-xl"
             >
               <FaLink className="absolute" color="#FFF" size="5rem" />
               <img
@@ -54,7 +54,7 @@ const Blog = () => {
                 alt={node.article.title}
               />
             </a>
-            <h5 className="mt-3 w-5/6 truncate font-semibold">
+            <h5 className="mt-4 w-5/6 truncate font-semibold">
               {node.article.title}
             </h5>
             <h6 className="text-xs">

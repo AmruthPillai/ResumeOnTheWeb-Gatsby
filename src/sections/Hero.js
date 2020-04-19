@@ -1,18 +1,12 @@
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
-import React from "react";
+import React, { useState } from "react";
+import ReactTooltip from "react-tooltip";
 import Social from "../components/Social";
-
-const Subtitle = () => (
-  <ul className="flex text-sm text-gray-800">
-    <li className="mr-3 text-white">Designer</li>|
-    <li className="mx-3 text-white">Developer</li>|
-    <li className="mx-3 text-white">Photographer</li>|
-    <li className="ml-3 text-white">Writer</li>
-  </ul>
-);
+import Subtitle from "../components/Subtitle";
 
 const Hero = () => {
+  const [showSocial, setShowSocial] = useState(false);
   const data = useStaticQuery(graphql`
     {
       photo: file(relativePath: { eq: "photo.png" }) {
@@ -42,8 +36,13 @@ const Hero = () => {
           <GatsbyImage className="h-32" {...data.logo.childImageSharp} />
 
           <div className="ml-4">
-            <Subtitle />
-            <Social />
+            <Subtitle
+              onDone={() => {
+                setShowSocial(true);
+                ReactTooltip.rebuild();
+              }}
+            />
+            <div className="h-6 my-10">{showSocial && <Social />}</div>
           </div>
         </div>
       </div>

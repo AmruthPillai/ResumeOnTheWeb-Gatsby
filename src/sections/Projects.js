@@ -47,7 +47,7 @@ const Projects = () => {
               href={node.website || node.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="h-48 relative flex-center cursor-pointer"
+              className="h-48 relative flex-center cursor-pointer rounded-lg shadow-xl"
               style={{ width: "340px" }}
             >
               <FaLink className="absolute" color="#FFF" size="5rem" />

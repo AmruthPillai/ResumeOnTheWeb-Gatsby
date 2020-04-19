@@ -1,5 +1,5 @@
 .container {
-  @apply my-10 flex;
+  @apply flex;
 }
 
 .container > div {

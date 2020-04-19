@@ -1,12 +1,12 @@
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
 import React, { useState } from "react";
+import ReactTooltip from "react-tooltip";
 import Heading from "../components/Heading";
-import { MdWork, MdLocationOn, MdMoreHoriz } from "../components/Icons";
+import { MdLocationOn, MdMoreHoriz, MdWork } from "../components/Icons";
 
 const Work = () => {
   const [max, setMax] = useState(3);
-
   const data = useStaticQuery(graphql`
     {
       allWorkJson {
@@ -86,7 +86,11 @@ const Work = () => {
             className="px-4"
             data-tip="Load More"
             data-place="right"
-            onClick={() => setMax(6)}
+            onClick={() => {
+              setMax(6);
+              ReactTooltip.rebuild();
+              ReactTooltip.hide();
+            }}
           >
             <MdMoreHoriz size="1.5rem" />
           </div>
