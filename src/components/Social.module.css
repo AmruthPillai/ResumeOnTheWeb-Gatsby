@@ -2,18 +2,18 @@
   @apply flex;
 }
 
-.container > div {
+.container > a {
   @apply w-6 h-6 cursor-pointer rounded-full flex justify-center items-center pl-px pt-px;
 }
 
-.container > div:first-child {
+.container > a:first-child {
   @apply mr-3;
 }
 
-.container > div:last-child {
+.container > a:last-child {
   @apply ml-3;
 }
 
-.container > div:not(:first-child):not(:last-child) {
+.container > a:not(:first-child):not(:last-child) {
   @apply mx-3;
 }

@@ -11,6 +11,7 @@ import Skills from "../sections/Skills";
 import Work from "../sections/Work";
 import Achievements from "../sections/Achievements";
 import Certifications from "../sections/Certifications";
+import Photography from "../sections/Photography";
 
 const IndexPage = () => {
   return (
@@ -31,6 +32,7 @@ const IndexPage = () => {
           <Certifications />
           <Philanthropy />
         </div>
+        <Photography />
       </div>
     </Wrapper>
   );

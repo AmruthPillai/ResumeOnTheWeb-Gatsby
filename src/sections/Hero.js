@@ -42,7 +42,7 @@ const Hero = () => {
                 ReactTooltip.rebuild();
               }}
             />
-            <div className="h-6 my-10">{showSocial && <Social />}</div>
+            <div className="h-6 my-6">{showSocial && <Social />}</div>
           </div>
         </div>
       </div>

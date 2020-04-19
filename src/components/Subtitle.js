@@ -5,24 +5,31 @@ import Typist from "react-typist";
 const Subtitle = ({ onDone }) => (
   <Typist
     startDelay={500}
-    avgTypingDelay={40}
+    avgTypingDelay={30}
     cursor={{ show: false }}
-    className="mt-4 flex"
+    className="my-2 flex h-32"
     onTypingDone={onDone}
   >
     <code className="w-2/3 text-sm text-left leading-loose">
-      <span className="text-blue-600">const</span>{" "}
-      <span className="text-orange-400">amruth</span>:{" "}
-      <span className="text-orange-400">Array</span>&lt;
-      <span className="text-green-400">Ingredient</span>&gt;{" "}
-      <span className="text-blue-600">=</span> [
-      <span className="text-red-500">Designer</span>,{" "}
-      <span className="text-red-500">Developer</span>,{" "}
-      <span className="text-red-500">Photographer</span>,{" "}
-      <span className="text-red-500">Writer</span>,{" "}
-      <span className="text-red-500">Sugar</span>,{" "}
-      <span className="text-red-500">Spice</span>, ...
-      <span className="text-red-500">everythingNice</span>];
+      <div>
+        <span className="text-blue-600">const</span>{" "}
+        <span className="text-orange-400">amruth</span>:{" "}
+        <span className="text-orange-400">Array</span>&lt;
+        <span className="text-green-400">Ingredient</span>&gt;{" "}
+        <span className="text-blue-600">=</span> [
+      </div>
+      <div className="pl-8">
+        <span className="text-red-500">Designer</span>,{" "}
+        <span className="text-red-500">Developer</span>,{" "}
+        <span className="text-red-500">Photographer</span>,{" "}
+        <span className="text-red-500">Writer</span>,{" "}
+      </div>
+      <div className="pl-8">
+        <span className="text-red-500">Sugar</span>,{" "}
+        <span className="text-red-500">Spice</span>, ...
+        <span className="text-red-500">everythingNice</span>,
+      </div>
+      <div>];</div>
     </code>
   </Typist>
 );

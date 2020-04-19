@@ -19,8 +19,6 @@ const Navigation = () => {
     }
   `);
 
-  console.log(styles);
-
   const scrollToTop = () =>
     scroll.scrollToTop({
       delay: 50,

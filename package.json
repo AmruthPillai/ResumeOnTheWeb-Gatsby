@@ -15,6 +15,7 @@
     "gatsby-plugin-sharp": "2.5.6",
     "gatsby-source-dev": "^0.1.4",
     "gatsby-source-filesystem": "^2.2.4",
+    "gatsby-source-instagram": "^0.7.0",
     "gatsby-transformer-json": "^2.3.3",
     "gatsby-transformer-remark": "^2.7.3",
     "gatsby-transformer-sharp": "^2.4.6",
