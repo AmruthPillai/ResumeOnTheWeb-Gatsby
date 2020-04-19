@@ -1,3 +1,5 @@
+const { colors } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   theme: {
     container: {
@@ -5,6 +7,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        primary: colors.teal,
         instagram: "#E1306C",
         linkedin: "#2867B2",
         github: "#211F1F",

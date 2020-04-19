@@ -5,9 +5,12 @@ import Blog from "../sections/Blog";
 import Education from "../sections/Education";
 import Hero from "../sections/Hero";
 import Languages from "../sections/Languages";
+import Philanthropy from "../sections/Philanthropy";
 import Projects from "../sections/Projects";
 import Skills from "../sections/Skills";
 import Work from "../sections/Work";
+import Achievements from "../sections/Achievements";
+import Certifications from "../sections/Certifications";
 
 const IndexPage = () => {
   return (
@@ -23,6 +26,11 @@ const IndexPage = () => {
         <Projects />
         <Blog />
         <Languages />
+        <div className="grid grid-cols-3">
+          <Achievements />
+          <Certifications />
+          <Philanthropy />
+        </div>
       </div>
     </Wrapper>
   );

@@ -1,0 +1,25 @@
+.container {
+  @apply flex py-1;
+}
+
+.container div:first-child {
+  left: 0;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  @apply relative;
+}
+
+.container:hover div:first-child {
+  left: 0.8em;
+  color: theme("colors.primary.500");
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.container div:last-child h6 {
+  color: inherit;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.container:hover div:last-child h6 {
+  color: theme("colors.primary.500");
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}

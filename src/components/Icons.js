@@ -1,5 +1,6 @@
 import { AiFillInstagram, AiFillSafetyCertificate } from "react-icons/ai";
 import {
+  FaAngleRight,
   FaAward,
   FaBoxOpen,
   FaDev,
@@ -13,7 +14,6 @@ import {
   FaLinkedinIn,
   FaMapSigns,
   FaSignLanguage,
-  FaSkiing,
   FaTwitter,
 } from "react-icons/fa";
 import { GoTools } from "react-icons/go";
@@ -30,6 +30,7 @@ import {
 export {
   AiFillInstagram,
   AiFillSafetyCertificate,
+  FaAngleRight,
   FaAward,
   FaBoxOpen,
   FaDev,
@@ -43,7 +44,6 @@ export {
   FaLinkedinIn,
   FaMapSigns,
   FaSignLanguage,
-  FaSkiing,
   FaTwitter,
   GoTools,
   IoIosDocument,

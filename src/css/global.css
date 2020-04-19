@@ -39,12 +39,22 @@ p {
   @apply leading-relaxed pb-4;
 }
 
+.transition-default {
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
 section {
   padding: 50px 0;
 }
 
-.transition-default {
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+section .heading {
+  color: inherit;
+  @apply transition-default;
+}
+
+section:hover .heading {
+  color: theme("colors.primary.500");
+  @apply transition-default;
 }
 
 .flex-center {
