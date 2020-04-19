@@ -10,7 +10,7 @@ const SEO = () => {
           siteMetadata {
             title
             description
-            author
+            author 
           }
         }
       }
