@@ -7,7 +7,7 @@
   {
     "icon": "../images/skills/angular.png",
     "name": "Frontend Javascript Frameworks",
-    "tech": "AngularJS/Angular 7/React/Vue.js"
+    "tech": "AngularJS/Angular 9/React/Vue.js/Svelte"
   },
   {
     "icon": "../images/skills/nodejs.png",
@@ -32,12 +32,12 @@
   {
     "icon": "../images/skills/android.png",
     "name": "Android App Development",
-    "tech": "Android Studio/Java + Kotlin/XML"
+    "tech": "Android Studio/Java/Kotlin/XML"
   },
   {
     "icon": "../images/skills/sketch.png",
     "name": "UI/UX Design",
-    "tech": "Adobe Photoshop/Illustrator/XD & Sketch"
+    "tech": "Adobe XD/Figma/Sketch"
   },
   {
     "icon": "../images/skills/tensorflow.png",
@@ -52,7 +52,7 @@
   {
     "icon": "../images/skills/photography.png",
     "name": "Photography & Cinematography",
-    "tech": "Adobe Photoshop Lightroom"
+    "tech": "Adobe Photoshop/Lightroom"
   },
   {
     "icon": "../images/skills/fcpx.png",

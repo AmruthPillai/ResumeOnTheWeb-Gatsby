@@ -5,10 +5,10 @@ import Social from "../components/Social";
 
 const Subtitle = () => (
   <ul className="flex text-sm text-gray-800">
-    <li className="mr-3 text-gray-400">Designer</li>|
-    <li className="mx-3 text-gray-400">Developer</li>|
-    <li className="mx-3 text-gray-400">Photographer</li>|
-    <li className="ml-3 text-gray-400">Writer</li>
+    <li className="mr-3 text-white">Designer</li>|
+    <li className="mx-3 text-white">Developer</li>|
+    <li className="mx-3 text-white">Photographer</li>|
+    <li className="ml-3 text-white">Writer</li>
   </ul>
 );
 
