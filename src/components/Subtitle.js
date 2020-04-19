@@ -4,6 +4,7 @@ import Typist from "react-typist";
 
 const Subtitle = ({ onDone }) => (
   <Typist
+    startDelay={200}
     avgTypingDelay={40}
     cursor={{ show: false }}
     className="mt-4 flex"

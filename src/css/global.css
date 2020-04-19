@@ -43,6 +43,20 @@ section {
   padding: 50px 0;
 }
 
+.transition-default {
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
 .flex-center {
   @apply flex justify-center items-center;
+}
+
+.grayscale {
+  filter: contrast(0%) grayscale(100%);
+  @apply transition-default;
+}
+
+.grayscale:hover {
+  filter: contrast(100%) grayscale(0%);
+  @apply transition-default;
 }

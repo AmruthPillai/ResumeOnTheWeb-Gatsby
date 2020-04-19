@@ -12,7 +12,7 @@ const Navigation = () => {
       icon: file(relativePath: { eq: "icon.png" }) {
         childImageSharp {
           fixed(width: 32, height: 32) {
-            ...GatsbyImageSharpFixed_withWebp_noBase64
+            ...GatsbyImageSharpFixed_noBase64
           }
         }
       }
@@ -52,7 +52,7 @@ const Navigation = () => {
         data-tip="Go to Top"
         data-place="right"
       >
-        <GatsbyImage {...data.icon.childImageSharp} />
+        <GatsbyImage className="grayscale" {...data.icon.childImageSharp} />
       </div>
       <div className="flex flex-col justify-center items-center">
         <div className={styles.menu}>
