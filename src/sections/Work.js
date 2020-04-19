@@ -21,7 +21,7 @@ const Work = () => {
             icon {
               childImageSharp {
                 fixed(height: 32) {
-                  ...GatsbyImageSharpFixed_noBase64
+                  ...GatsbyImageSharpFixed_withWebp_noBase64
                 }
               }
             }

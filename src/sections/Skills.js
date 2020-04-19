@@ -17,7 +17,7 @@ const Skills = () => {
             icon {
               childImageSharp {
                 fixed(width: 20, height: 20) {
-                  ...GatsbyImageSharpFixed_noBase64
+                  ...GatsbyImageSharpFixed_withWebp_noBase64
                 }
               }
             }

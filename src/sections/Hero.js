@@ -12,14 +12,14 @@ const Hero = () => {
       photo: file(relativePath: { eq: "photo.png" }) {
         childImageSharp {
           fluid(maxWidth: 512) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fixed(height: 128) {
-            ...GatsbyImageSharpFixed_noBase64
+            ...GatsbyImageSharpFixed_withWebp_noBase64
           }
         }
       }

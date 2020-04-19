@@ -19,8 +19,6 @@ const Certifications = () => {
     }
   `);
 
-  console.log(data);
-
   return (
     <section id="certifications">
       <Heading icon={AiFillSafetyCertificate} title="Certifications" />

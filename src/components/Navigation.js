@@ -12,7 +12,7 @@ const Navigation = () => {
       icon: file(relativePath: { eq: "icon.png" }) {
         childImageSharp {
           fixed(width: 32, height: 32) {
-            ...GatsbyImageSharpFixed_noBase64
+            ...GatsbyImageSharpFixed_withWebp_noBase64
           }
         }
       }

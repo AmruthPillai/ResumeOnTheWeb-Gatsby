@@ -10,7 +10,7 @@
 
 .container .section-links > div {
   cursor: pointer;
-  margin: -1em 0;
+  margin-top: -1em;
   transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   @apply opacity-0;
   @apply transition-all duration-300;
@@ -23,7 +23,7 @@
 }
 
 .container:hover .section-links > div {
-  padding: 1em 0;
+  padding-top: 2em;
   transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   @apply opacity-100;
   @apply transition-all duration-300;

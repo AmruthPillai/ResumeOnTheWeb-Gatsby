@@ -19,8 +19,6 @@ const Achievements = () => {
     }
   `);
 
-  console.log(data);
-
   return (
     <section id="achievements">
       <Heading icon={FaAward} title="Achievements" />
