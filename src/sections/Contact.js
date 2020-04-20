@@ -20,7 +20,7 @@ const Contact = () => {
     return re.test(String(email).toLowerCase());
   };
 
-  const onSubmit = async e => {
+  const onSubmit = e => {
     let formValid = true;
     e.preventDefault();
 
@@ -53,14 +53,15 @@ const Contact = () => {
 
     if (formValid) {
       const url =
-        "https://us-central1-amruthpillai-resumeontheweb.cloudfunctions.net/sendEmail";
+        "http://localhost:5000/amruthpillai-resumeontheweb/us-central1/sendEmail";
       const opts = {
         method: "POST",
         body: JSON.stringify({ name, email, message }),
       };
 
-      await fetch(url, opts);
-      setButtonText("Sent!");
+      fetch(url, opts)
+        .then(() => setButtonText("Message Received!"))
+        .catch(() => setButtonText("An Error Occurred!"));
     }
   };
 
