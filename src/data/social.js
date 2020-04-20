@@ -1,12 +1,11 @@
 import {
+  FaDev,
   FaDribbble,
   FaFacebookF,
   FaGithubAlt,
   FaInstagram,
   FaLinkedinIn,
-  FaMapSigns,
   FaTwitter,
-  FaDev,
 } from "../components/Icons";
 
 const social = [
@@ -51,12 +50,6 @@ const social = [
     icon: FaTwitter,
     link: "https://pillai.xyz/twitter",
     class: "bg-twitter",
-  },
-  {
-    title: "Google Maps",
-    icon: FaMapSigns,
-    link: "https://pillai.xyz/google-maps",
-    class: "bg-google",
   },
 ];
 

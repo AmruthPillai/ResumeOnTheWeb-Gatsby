@@ -1,10 +1,14 @@
 import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
-import Heading from "../components/Heading";
-import { AiFillInstagram, FaLink } from "../components/Icons";
 import GatsbyImage from "gatsby-image";
-import { FaHeart, FaInstagram } from "react-icons/fa";
+import React from "react";
 import Button from "../components/Button";
+import Heading from "../components/Heading";
+import {
+  AiFillInstagram,
+  FaHeart,
+  FaInstagram,
+  FaLink,
+} from "../components/Icons";
 
 const Photography = () => {
   const data = useStaticQuery(graphql`

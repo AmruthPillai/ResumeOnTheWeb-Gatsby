@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "../components/Heading";
-import { FaInfoCircle, FaStar } from "react-icons/fa";
+import { FaInfoCircle, FaStar } from "../components/Icons";
 import { useStaticQuery, graphql } from "gatsby";
 import Button from "../components/Button";
 
@@ -18,7 +18,7 @@ const Footer = () => {
       <Heading icon={FaInfoCircle} title="About Resume on the Web" />
 
       <div
-        className="text-justify w-3/4 wow fadeInDown"
+        className="text-justify w-3/4 wow fadeIn"
         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
       />
 
