@@ -1,5 +1,5 @@
 .language {
-  @apply text-sm;
+  @apply text-sm mb-3;
 }
 
 .language > span.divider {
@@ -8,4 +8,10 @@
 
 .language:last-child > span.divider {
   @apply hidden;
+}
+
+@screen md {
+  .language {
+    @apply mb-0;
+  }
 }

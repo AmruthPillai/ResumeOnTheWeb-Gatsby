@@ -26,7 +26,7 @@ const Languages = () => {
     <section id="languages">
       <Heading icon={FaSignLanguage} title="Languages" />
 
-      <div className="h-32 flex items-center wow fadeIn">
+      <div className="h-48 md:h-40 lg:h-32 wow fadeIn">
         <Typist
           key={typistIndex}
           avgTypingDelay={40}
@@ -49,7 +49,7 @@ const Languages = () => {
         </Typist>
       </div>
 
-      <div className="mt-12 flex">
+      <div className="mt-12 flex flex-wrap">
         {data.allLanguagesJson.edges.map(({ node }) => {
           return (
             <div key={node.id} className={styles.language}>
