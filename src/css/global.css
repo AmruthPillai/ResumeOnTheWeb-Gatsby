@@ -28,11 +28,11 @@ h6 {
 }
 
 a {
-  @apply text-blue-600;
+  @apply font-semibold;
 }
 
 a:hover {
-  @apply text-blue-500 underline;
+  @apply underline;
 }
 
 p {

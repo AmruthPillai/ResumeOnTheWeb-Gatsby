@@ -46,7 +46,7 @@ const Blog = () => {
               href={node.article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full h-48 relative flex-center cursor-pointer rounded-lg shadow-xl"
+              className="w-full h-48 bg-black relative flex-center cursor-pointer rounded-lg shadow-xl"
             >
               <FaLink className="absolute" color="#FFF" size="5rem" />
               <img

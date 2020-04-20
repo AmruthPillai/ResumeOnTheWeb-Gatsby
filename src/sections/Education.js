@@ -1,10 +1,12 @@
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
-import React from "react";
+import React, { useContext } from "react";
 import Heading from "../components/Heading";
 import { MdSchool } from "../components/Icons";
+import ThemeContext from "../context/ThemeContext";
 
 const Education = () => {
+  const { dark } = useContext(ThemeContext);
   const data = useStaticQuery(graphql`
     {
       allEducationJson {
@@ -44,7 +46,9 @@ const Education = () => {
                 }}
               >
                 <div
-                  className="relative mt-3 w-3 h-3 rounded-full bg-white shadow-xl opacity-75 z-2"
+                  className={`relative mt-3 w-3 h-3 rounded-full shadow-xl opacity-75 z-2 ${
+                    dark ? "bg-white" : "bg-primary-600"
+                  } duration-200`}
                   data-tip={`(${node.period})`}
                   data-place="left"
                 />

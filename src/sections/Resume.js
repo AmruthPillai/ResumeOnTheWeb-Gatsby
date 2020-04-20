@@ -28,7 +28,7 @@ const Resume = () => {
             href="https://pillai.xyz/resume-pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full h-64 relative flex-center cursor-pointer rounded-lg shadow-xl"
+            className="w-full h-64 bg-black relative flex-center cursor-pointer rounded-lg shadow-xl"
           >
             <FaLink className="absolute" color="#FFF" size="5rem" />
             <GatsbyImage

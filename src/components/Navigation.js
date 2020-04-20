@@ -1,12 +1,14 @@
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
-import React from "react";
-import { scroller, animateScroll as scroll } from "react-scroll";
+import React, { useContext } from "react";
+import { animateScroll as scroll, scroller } from "react-scroll";
+import ThemeContext from "../context/ThemeContext";
 import sections from "../data/sections";
-import { FaInfoCircle, MdMenu } from "./Icons";
+import { IoIosMoon, IoIosSunny, MdMenu } from "./Icons";
 import styles from "./Navigation.module.css";
 
 const Navigation = () => {
+  const { dark, toggleDark } = useContext(ThemeContext);
   const data = useStaticQuery(graphql`
     query {
       icon: file(relativePath: { eq: "icon.png" }) {
@@ -51,7 +53,7 @@ const Navigation = () => {
   return (
     <div className={`${styles.container} animated fadeInLeft`}>
       <div
-        className="cursor-pointer"
+        className="flex-center cursor-pointer"
         onClick={scrollToTop}
         data-tip="Go to Top"
         data-place="right"
@@ -64,8 +66,13 @@ const Navigation = () => {
         </div>
         <div className={styles.sectionLinks}>{sections.map(SectionLink)}</div>
       </div>
-      <div className="flex flex-col justify-center items-center">
-        <FaInfoCircle />
+      <div
+        className="flex-center cursor-pointer hover:text-primary-500"
+        onClick={toggleDark}
+        data-tip="Toggle Dark Mode"
+        data-place="right"
+      >
+        {dark ? <IoIosMoon /> : <IoIosSunny />}
       </div>
     </div>
   );

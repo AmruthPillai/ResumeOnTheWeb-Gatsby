@@ -1,4 +1,11 @@
-.container {
+.dark {
   color: #dddddd;
   background-color: #121212;
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.light {
+  color: #222222;
+  background-color: #ffffff;
+  @apply transition-all duration-200 ease-in-out;
 }

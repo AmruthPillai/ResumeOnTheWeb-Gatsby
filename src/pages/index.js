@@ -4,7 +4,9 @@ import AboutMe from "../sections/AboutMe";
 import Achievements from "../sections/Achievements";
 import Blog from "../sections/Blog";
 import Certifications from "../sections/Certifications";
+import Contact from "../sections/Contact";
 import Education from "../sections/Education";
+import Footer from "../sections/Footer";
 import Hero from "../sections/Hero";
 import Languages from "../sections/Languages";
 import Philanthropy from "../sections/Philanthropy";
@@ -35,6 +37,8 @@ const IndexPage = () => {
         </div>
         <Photography />
         <Resume />
+        <Contact />
+        <Footer />
       </div>
     </Wrapper>
   );

@@ -39,7 +39,7 @@ const Photography = () => {
         {data.allInstaNode.edges.map(({ node }, index) => (
           <div
             key={node.id}
-            className="relative cursor-pointer wow fadeIn"
+            className="relative cursor-pointer bg-black rounded-lg wow fadeIn"
             style={{
               animationDelay: `${index * 200 + 200}ms`,
             }}
@@ -55,7 +55,7 @@ const Photography = () => {
                 aspectRatio: 1 / 1,
               }}
             />
-            <div className="absolute bottom-0 flex items-center rounded-bl-lg rounded-tr-lg bg-black opacity-75 text-sm px-6 py-2">
+            <div className="absolute bottom-0 flex items-center rounded-bl-lg rounded-tr-lg bg-black text-white opacity-75 text-sm px-6 py-2">
               <FaHeart className="mr-2" />
               <span className="font-semibold">{node.likes}</span>
             </div>

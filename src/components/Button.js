@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import styles from "./Button.module.css";
+import ThemeContext from "../context/ThemeContext";
 
-const Button = ({ className, icon, title, onClick }) => {
+const Button = ({ type, className, icon, title, onClick, disabled }) => {
+  const { dark } = useContext(ThemeContext);
   const Icon = icon;
 
   return (
-    <button className={`${styles.container} ${className}`} onClick={onClick}>
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={`${styles.container} ${className} ${!dark && styles.light}`}
+    >
       <div>
         <Icon />
         <h6>{title}</h6>
@@ -17,10 +24,17 @@ const Button = ({ className, icon, title, onClick }) => {
 };
 
 Button.propTypes = {
+  type: PropTypes.string,
   className: PropTypes.string,
   title: PropTypes.string.isRequired,
-  icon: PropTypes.node.isRequired,
+  icon: PropTypes.any.isRequired,
   onClick: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
+};
+
+Button.defaultProps = {
+  type: "button",
+  disabled: false,
 };
 
 export default Button;

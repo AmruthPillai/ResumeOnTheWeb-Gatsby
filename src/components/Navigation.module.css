@@ -1,9 +1,9 @@
 .transition-default {
-  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .container {
-  @apply fixed inset-y-0 left-0 flex flex-col justify-between p-4;
+  @apply fixed inset-y-0 left-0 flex flex-col justify-between items-center p-4;
 }
 
 .container .menu {

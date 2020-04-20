@@ -17,7 +17,13 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { GoTools } from "react-icons/go";
-import { IoIosDocument, IoIosJournal } from "react-icons/io";
+import {
+  IoIosDocument,
+  IoIosJournal,
+  IoIosMoon,
+  IoIosPaperPlane,
+  IoIosSunny,
+} from "react-icons/io";
 import {
   MdLocationOn,
   MdMenu,
@@ -48,6 +54,9 @@ export {
   GoTools,
   IoIosDocument,
   IoIosJournal,
+  IoIosMoon,
+  IoIosPaperPlane,
+  IoIosSunny,
   MdLocationOn,
   MdMenu,
   MdMoreHoriz,

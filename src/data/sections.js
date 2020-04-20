@@ -4,6 +4,7 @@ import {
   FaAward,
   FaBoxOpen,
   FaDev,
+  IoIosPaperPlane,
   FaSignLanguage,
   GoTools,
   IoIosDocument,
@@ -30,6 +31,7 @@ const sections = [
   },
   { id: "photography", title: "Photography", icon: AiFillInstagram },
   { id: "resume", title: "Resume", icon: IoIosDocument },
+  { id: "contact", title: "Contact", icon: IoIosPaperPlane },
 ];
 
 export default sections;

@@ -11,10 +11,18 @@
 }
 
 .container > div:first-child {
-  @apply relative flex items-center font-semibold bg-white text-black px-8 py-2 z-20;
+  color: #121212;
+  background-color: #ffffff;
+  @apply relative flex items-center font-semibold px-8 py-2 z-20;
   @apply transition-default;
   top: 0;
   left: 0;
+}
+
+.container.light > div:first-child {
+  color: #ffffff;
+  background-color: #222222;
+  @apply transition-default;
 }
 
 .container > div:first-child svg {
@@ -27,11 +35,6 @@
   left: 2px;
 }
 
-.container:hover > div:first-child svg {
-  @apply transition-default;
-  color: theme("colors.primary.600");
-}
-
 .container:active > div:first-child {
   @apply transition-default;
   top: 4px;
@@ -39,7 +42,13 @@
 }
 
 .container > div:last-child {
-  @apply absolute w-full h-full border-2 border-white z-10;
+  border-color: #ffffff;
+  @apply absolute w-full h-full border-2 z-10;
   top: 4px;
   left: 4px;
+}
+
+.container.light > div:last-child {
+  border-color: #222222;
+  @apply transition-default;
 }
