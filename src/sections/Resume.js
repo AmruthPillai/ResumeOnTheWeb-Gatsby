@@ -22,27 +22,27 @@ const Resume = () => {
     <section id="resume">
       <Heading icon={IoIosDocument} title="Resume" />
 
-      <div className="grid grid-cols-5 gap-8 items-center">
-        <div className="col-span-2">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-5 md:gap-8 items-center">
+        <div className="col-span-1 md:col-span-2">
           <a
             href="https://pillai.xyz/resume-pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full h-64 bg-black relative flex-center cursor-pointer rounded-lg shadow-lg"
+            className="w-full h-64 md:h-48 lg:h-64 bg-black relative flex-center cursor-pointer rounded-lg shadow-lg"
           >
             <FaLink className="absolute" color="#FFF" size="5rem" />
             <GatsbyImage
               {...data.file.childImageSharp}
-              className="absolute w-full h-64 object-cover rounded-lg hover:opacity-50 duration-200"
+              className="absolute w-full h-64 md:h-48 lg:h-64 object-cover rounded-lg hover:opacity-50 duration-200"
               imgStyle={{ objectPosition: "top" }}
             />
           </a>
         </div>
-        <div className="col-span-3">
-          <h4 className="font-semibold">
+        <div className="col-span-1 md:col-span-3">
+          <h5 className="text-lg lg:text-xl font-semibold">
             To those HRs out there who need a more organized and minimal version
             of my information, you can download the trusted PDF version here:
-          </h4>
+          </h5>
 
           <Button
             className="mt-8"

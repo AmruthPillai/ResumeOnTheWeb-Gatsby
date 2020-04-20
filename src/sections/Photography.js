@@ -9,6 +9,7 @@ import {
   FaInstagram,
   FaLink,
 } from "../components/Icons";
+import styles from "./Photography.module.css";
 
 const Photography = () => {
   const data = useStaticQuery(graphql`
@@ -39,11 +40,11 @@ const Photography = () => {
     <section id="photography">
       <Heading icon={AiFillInstagram} title="Photography" />
 
-      <div className="grid grid-cols-5 gap-6">
+      <div className={styles.container}>
         {data.allInstaNode.edges.map(({ node }, index) => (
           <div
             key={node.id}
-            className="relative cursor-pointer bg-black rounded-lg wow fadeIn"
+            className="relative cursor-pointer bg-black md:rounded-lg wow fadeIn"
             style={{
               animationDelay: `${index * 200 + 200}ms`,
             }}
@@ -53,13 +54,13 @@ const Photography = () => {
               <FaLink className="absolute" color="#FFF" size="5rem" />
             </div>
             <GatsbyImage
-              className="absolute inset-0 rounded-lg hover:opacity-50 duration-200"
+              className="absolute inset-0 md:rounded-lg hover:opacity-50 duration-200"
               sizes={{
                 ...node.localFile.childImageSharp.fluid,
                 aspectRatio: 1 / 1,
               }}
             />
-            <div className="absolute bottom-0 flex items-center rounded-bl-lg rounded-tr-lg bg-black text-white opacity-75 text-sm px-6 py-2">
+            <div className="absolute bottom-0 flex items-center md:rounded-bl-lg rounded-tr-lg bg-black text-white opacity-75 text-sm px-6 py-2">
               <FaHeart className="mr-2" />
               <span className="font-semibold">{node.likes}</span>
             </div>

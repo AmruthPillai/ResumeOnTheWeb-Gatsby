@@ -23,7 +23,7 @@ const Wrapper = ({ children }) => {
       <SEO />
       <Navigation />
 
-      <div className="mx-6 lg:mx-16 xl:mx-0">{children}</div>
+      <div className="mx-8 lg:mx-16 xl:mx-0">{children}</div>
     </div>
   );
 };

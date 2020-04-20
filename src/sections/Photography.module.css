@@ -1,0 +1,45 @@
+.container {
+  @apply grid grid-cols-2 gap-0;
+}
+
+.container > div:nth-child(n + 9) {
+  @apply hidden;
+}
+
+@screen md {
+  .container {
+    @apply grid-cols-3 gap-6;
+  }
+
+  .container > div {
+    @apply block !important;
+  }
+
+  .container > div:nth-child(n + 10) {
+    @apply hidden !important;
+  }
+}
+
+@screen lg {
+  .container {
+    @apply grid-cols-4 gap-5;
+  }
+
+  .container > div {
+    @apply block !important;
+  }
+
+  .container > div:nth-child(n + 9) {
+    @apply hidden !important;
+  }
+}
+
+@screen xl {
+  .container {
+    @apply grid-cols-5 gap-6;
+  }
+
+  .container > div:nth-child(n) {
+    @apply block !important;
+  }
+}

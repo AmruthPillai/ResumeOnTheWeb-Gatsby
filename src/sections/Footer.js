@@ -18,7 +18,7 @@ const Footer = () => {
       <Heading icon={FaInfoCircle} title="About Resume on the Web" />
 
       <div
-        className="text-justify w-3/4 wow fadeIn"
+        className="text-justify w-full md:w-4/5 lg:w-3/4 wow fadeIn"
         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
       />
 

@@ -4,11 +4,6 @@ body {
   font-family: "Fira Sans", sans-serif;
 }
 
-svg {
-  width: 16px;
-  height: 16px;
-}
-
 h1 {
   @apply text-4xl;
 }
@@ -47,10 +42,6 @@ p {
 
 .transition-default {
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-section {
-  padding: 50px 0;
 }
 
 section .heading {

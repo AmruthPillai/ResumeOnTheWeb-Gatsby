@@ -24,8 +24,8 @@ const Contact = () => {
     <section id="contact">
       <Heading icon={IoIosPaperPlane} title="Contact" />
 
-      <form className="w-1/2">
-        <label htmlFor="name" className="w-2/3 flex flex-col">
+      <form className="lg:w-2/3 xl:w-1/2">
+        <label htmlFor="name" className="w-4/5 md:w-2/3 flex flex-col">
           <h6 className="font-semibold text-sm mb-2">Full Name</h6>
           <input
             required
@@ -40,7 +40,7 @@ const Contact = () => {
           <p className="text-xs mt-2">The one where you tell me your name</p>
         </label>
 
-        <label htmlFor="email" className="mt-2 w-2/3 flex flex-col">
+        <label htmlFor="email" className="mt-2 w-4/5 md:w-2/3 flex flex-col">
           <h6 className="font-semibold text-sm mb-2">Email Address</h6>
           <input
             required

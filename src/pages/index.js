@@ -15,14 +15,15 @@ import Projects from "../sections/Projects";
 import Resume from "../sections/Resume";
 import Skills from "../sections/Skills";
 import Work from "../sections/Work";
+import styles from "./index.module.css";
 
 const IndexPage = () => {
   return (
     <Wrapper>
-      <div className="container">
+      <div className={`container ${styles.layout}`}>
         <Hero />
         <AboutMe />
-        <div className="grid md:grid-cols-2">
+        <div className={styles.workEducation}>
           <Work />
           <Education />
         </div>
@@ -30,15 +31,21 @@ const IndexPage = () => {
         <Projects />
         <Blog />
         <Languages />
-        {/*<div className="grid grid-cols-3">
-          <Achievements />
-          <Certifications />
-          <Philanthropy />
+        <div className={styles.achievementsCertificationPhilanthropy}>
+          <div>
+            <Achievements />
+          </div>
+          <div>
+            <Certifications />
+          </div>
+          <div>
+            <Philanthropy />
+          </div>
         </div>
         <Photography />
         <Resume />
         <Contact />
-        <Footer /> */}
+        <Footer />
       </div>
     </Wrapper>
   );
