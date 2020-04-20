@@ -14,7 +14,4 @@
     "plugin:react/recommended",
     "plugin:import/recommended"
   ],
-  "rules": {
-    "no-unused-vars": "off"
-  }
 }

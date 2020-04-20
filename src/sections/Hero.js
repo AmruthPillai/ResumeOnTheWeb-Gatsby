@@ -5,11 +5,11 @@ import React, { useRef, useState, useEffect } from "react";
 import ReactTooltip from "react-tooltip";
 import Social from "../components/Social";
 import Subtitle from "../components/Subtitle";
-import { isMobile } from "../utils";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
   const [parallax, setParallax] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
   const [showSocial, setShowSocial] = useState(false);
   const data = useStaticQuery(graphql`
     {
@@ -29,6 +29,13 @@ const Hero = () => {
       }
     }
   `);
+
+  useEffect(() => {
+    if (typeof window !== `undefined`) {
+      const { isMobile } = require("../utils");
+      setIsMobile(isMobile);
+    }
+  }, []);
 
   useEffect(() => {
     if (!isMobile) {

@@ -1,18 +1,21 @@
 import PropTypes from "prop-types";
-import React, { useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import ReactTooltip from "react-tooltip";
 import ThemeContext from "../context/ThemeContext";
-import { isMobile } from "../utils";
 import Navigation from "./Navigation";
 import SEO from "./SEO";
 import styles from "./Wrapper.module.css";
 
 const Wrapper = ({ children }) => {
+  const [isMobile, setIsMobile] = useState(false);
   const { dark } = useContext(ThemeContext);
 
   useEffect(() => {
-    if (typeof window !== `undefined` || !isMobile) {
+    if (typeof window !== `undefined`) {
       const WOW = require("wowjs");
+      const { isMobile } = require("../utils");
+
+      setIsMobile(isMobile);
       new WOW.WOW({ live: false, mobile: false }).init();
     }
   }, []);

@@ -1,14 +1,14 @@
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
-import React, { useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import ThemeContext from "../context/ThemeContext";
 import sections from "../data/sections";
 import { IoIosMoon, IoIosSunny, MdMenu } from "./Icons";
 import styles from "./Navigation.module.css";
-import { isMobile } from "../utils";
 
 const Navigation = () => {
+  const [isMobile, setIsMobile] = useState(false);
   const { dark, toggleDark } = useContext(ThemeContext);
   const data = useStaticQuery(graphql`
     query {
@@ -21,6 +21,13 @@ const Navigation = () => {
       }
     }
   `);
+
+  useEffect(() => {
+    if (typeof window !== `undefined`) {
+      const { isMobile } = require("../utils");
+      setIsMobile(isMobile);
+    }
+  }, []);
 
   const scrollToTop = () =>
     scroll.scrollToTop({
