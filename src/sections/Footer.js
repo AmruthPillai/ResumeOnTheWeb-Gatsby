@@ -33,6 +33,12 @@ const Footer = () => {
           )
         }
       />
+
+      <div className="pt-24 pb-8 text-xs leading-relaxed opacity-25">
+        <div>Licensed under MIT.</div>
+        <div>Copyright {new Date().getFullYear()} Amruth Pillai.</div>
+        <div>Made with Love in Bengaluru, India.</div>
+      </div>
     </section>
   );
 };

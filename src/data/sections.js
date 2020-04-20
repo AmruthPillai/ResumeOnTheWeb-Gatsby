@@ -4,11 +4,12 @@ import {
   FaAward,
   FaBoxOpen,
   FaDev,
-  IoIosPaperPlane,
+  FaInfoCircle,
   FaSignLanguage,
   GoTools,
   IoIosDocument,
   IoIosJournal,
+  IoIosPaperPlane,
   MdPerson,
   MdSchool,
   MdWork,
@@ -32,6 +33,7 @@ const sections = [
   { id: "photography", title: "Photography", icon: AiFillInstagram },
   { id: "resume", title: "Resume", icon: IoIosDocument },
   { id: "contact", title: "Contact", icon: IoIosPaperPlane },
+  { id: "footer", title: "About RotW", icon: FaInfoCircle },
 ];
 
 export default sections;

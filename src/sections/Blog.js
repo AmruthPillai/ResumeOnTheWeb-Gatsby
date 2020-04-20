@@ -33,7 +33,7 @@ const Blog = () => {
     <section id="blog">
       <Heading icon={IoIosJournal} title="Blog" />
 
-      <div className="grid grid-cols-3 grid-rows-2 gap-8">
+      <div className="grid grid-cols-3 grid-rows-2 gap-10">
         {data.allDevArticles.edges.map(({ node }, index) => (
           <div
             key={node.id}
@@ -46,7 +46,7 @@ const Blog = () => {
               href={node.article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full h-48 bg-black relative flex-center cursor-pointer rounded-lg shadow-xl"
+              className="w-full h-48 bg-black relative flex-center cursor-pointer rounded-lg shadow-lg"
             >
               <FaLink className="absolute" color="#FFF" size="5rem" />
               <img

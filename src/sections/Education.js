@@ -46,7 +46,7 @@ const Education = () => {
                 }}
               >
                 <div
-                  className={`relative mt-3 w-3 h-3 rounded-full shadow-xl opacity-75 z-2 ${
+                  className={`relative mt-3 w-3 h-3 rounded-full shadow-lg opacity-75 z-2 ${
                     dark ? "bg-white" : "bg-primary-500"
                   } duration-200`}
                   data-tip={`(${node.period})`}
