@@ -7,10 +7,10 @@ const Subtitle = ({ onDone }) => (
     startDelay={500}
     avgTypingDelay={30}
     cursor={{ show: false }}
-    className="my-2 flex h-32"
+    className="my-2 flex lg:h-32"
     onTypingDone={onDone}
   >
-    <code className="text-sm text-left leading-loose">
+    <code className="text-xs w-full md:text-sm leading-loose">
       <div>
         <span className="text-blue-600">const</span>{" "}
         <span className="text-orange-400">amruth</span>:{" "}
@@ -18,13 +18,13 @@ const Subtitle = ({ onDone }) => (
         <span className="text-green-400">Ingredient</span>&gt;{" "}
         <span className="text-blue-600">=</span> [
       </div>
-      <div className="pl-8">
+      <div className="lg:pl-8">
         <span className="text-red-500">Designer</span>,{" "}
         <span className="text-red-500">Developer</span>,{" "}
         <span className="text-red-500">Photographer</span>,{" "}
         <span className="text-red-500">Writer</span>,{" "}
       </div>
-      <div className="pl-8">
+      <div className="lg:pl-8">
         <span className="text-red-500">Sugar</span>,{" "}
         <span className="text-red-500">Spice</span>, ...
         <span className="text-red-500">everythingNice</span>,

@@ -4,9 +4,6 @@
     "node": true
   },
   "parser": "babel-eslint",
-  "rules": {
-    "strict": 0
-  },
   "settings": {
     "react": {
       "version": "detect"
@@ -16,5 +13,8 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:import/recommended"
-  ]
+  ],
+  "rules": {
+    "no-unused-vars": "off"
+  }
 }

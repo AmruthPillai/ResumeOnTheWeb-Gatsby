@@ -1,19 +1,25 @@
 .container {
-  @apply flex;
+  @apply flex justify-between;
 }
 
 .container > a {
   @apply w-6 h-6 cursor-pointer rounded-full flex justify-center items-center pl-px pt-px;
 }
 
-.container > a:first-child {
-  @apply mr-3;
-}
+@screen md {
+  .container {
+    @apply justify-start;
+  }
 
-.container > a:last-child {
-  @apply ml-3;
-}
+  .container > a:first-child {
+    @apply mr-4;
+  }
 
-.container > a:not(:first-child):not(:last-child) {
-  @apply mx-3;
+  .container > a:last-child {
+    @apply ml-4;
+  }
+
+  .container > a:not(:first-child):not(:last-child) {
+    @apply mx-4;
+  }
 }

@@ -6,7 +6,9 @@ const Social = () => {
   return (
     <div className={styles.container}>
       {social.map((x, i) => {
+        if (!x.showInMobile) return null;
         const Icon = x.icon;
+
         return (
           <a
             key={x.title}

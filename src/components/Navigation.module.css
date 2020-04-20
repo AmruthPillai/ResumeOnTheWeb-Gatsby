@@ -3,31 +3,53 @@
 }
 
 .container {
-  @apply fixed inset-y-0 left-0 flex flex-col justify-between items-center p-4;
+  @apply fixed inset-x-0 top-0 z-20 flex justify-between items-center p-4;
 }
 
-.container .menu {
-  @apply opacity-100 transition-default;
+@screen md {
+  .container .section-links {
+    @apply flex;
+  }
+
+  .container .menu {
+    @apply opacity-100 transition-default;
+  }
+
+  .container:hover .menu {
+    @apply h-0 opacity-0 transition-default;
+  }
+
+  .container .section-links div {
+    cursor: pointer;
+    box-sizing: content-box;
+    @apply h-0 opacity-0 transition-default;
+  }
+
+  .container:hover .section-links div {
+    padding: 0 0.6em;
+    @apply h-4 opacity-100 transition-default;
+  }
 }
 
-.container .section-links div {
-  height: 0;
-  cursor: pointer;
-  box-sizing: content-box;
-  @apply opacity-0 transition-default;
-}
+@screen lg {
+  .container {
+    @apply inset-x-auto inset-y-0 left-0 flex-col;
+  }
 
-.container .section-links div:hover {
-  color: theme("colors.primary.500");
-  @apply transition-default;
-}
+  .container:hover .menu {
+    @apply h-4;
+  }
 
-.container:hover .menu {
-  @apply opacity-0 transition-default;
-}
+  .container .section-links {
+    @apply flex-col;
+  }
 
-.container:hover .section-links div {
-  height: 1em;
-  padding: 0.6em 0;
-  @apply opacity-100 transition-default;
+  .container:hover .section-links div {
+    padding: 0.6em 0;
+  }
+
+  .container .section-links div:hover {
+    color: theme("colors.primary.500");
+    @apply transition-default;
+  }
 }

@@ -5,6 +5,7 @@ import React, { useRef, useState, useEffect } from "react";
 import ReactTooltip from "react-tooltip";
 import Social from "../components/Social";
 import Subtitle from "../components/Subtitle";
+import { isMobile } from "../utils";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -21,8 +22,8 @@ const Hero = () => {
       }
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(height: 128) {
-            ...GatsbyImageSharpFixed_withWebp_noBase64
+          fluid(maxHeight: 128) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
@@ -30,12 +31,15 @@ const Hero = () => {
   `);
 
   useEffect(() => {
-    setParallax(
-      new Parallax(parallaxRef.current, {
-        invertX: false,
-        invertY: false,
-      }),
-    );
+    if (!isMobile) {
+      setParallax(
+        new Parallax(parallaxRef.current, {
+          invertX: false,
+          invertY: false,
+        }),
+      );
+    }
+
     return () => {
       parallax && parallax.destroy();
     };
@@ -43,16 +47,19 @@ const Hero = () => {
 
   return (
     <section id="hero" className="min-h-screen flex items-center container">
-      <div className="w-full grid grid-cols-5 gap-16 items-center">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-5 row-gap-8 lg:gap-16 justify-center lg:justify-start items-center mt-16 md:mt-0">
         <div ref={parallaxRef} className="col-span-2">
-          <div data-depth="0.4">
+          <div className="max-w-lg mx-auto" data-depth="0.4">
             <GatsbyImage {...data.photo.childImageSharp} />
           </div>
         </div>
         <div className="col-span-3">
-          <GatsbyImage className="h-32" {...data.logo.childImageSharp} />
+          <GatsbyImage
+            className="max-w-lg max-h-32 mx-auto lg:mx-0"
+            {...data.logo.childImageSharp}
+          />
 
-          <div className="ml-4">
+          <div className="lg:ml-4 text-center lg:text-left flex flex-col items-center lg:items-start">
             <Subtitle
               onDone={() => {
                 setShowSocial(true);

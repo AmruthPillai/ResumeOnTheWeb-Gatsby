@@ -6,6 +6,7 @@ import ThemeContext from "../context/ThemeContext";
 import sections from "../data/sections";
 import { IoIosMoon, IoIosSunny, MdMenu } from "./Icons";
 import styles from "./Navigation.module.css";
+import { isMobile } from "../utils";
 
 const Navigation = () => {
   const { dark, toggleDark } = useContext(ThemeContext);
@@ -51,7 +52,11 @@ const Navigation = () => {
   };
 
   return (
-    <div className={`${styles.container} animated fadeInLeft`}>
+    <div
+      className={`${styles.container} animated ${
+        isMobile ? "fadeInDown" : "fadeInLeft"
+      }`}
+    >
       <div
         className="flex-center cursor-pointer"
         onClick={scrollToTop}
@@ -60,7 +65,7 @@ const Navigation = () => {
       >
         <GatsbyImage className="grayscale" {...data.icon.childImageSharp} />
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="hidden md:flex flex-col justify-center items-center">
         <div className={styles.menu}>
           <MdMenu />
         </div>
