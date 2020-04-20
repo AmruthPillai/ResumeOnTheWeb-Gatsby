@@ -26,9 +26,9 @@ const IndexPage = () => {
           <Work />
           <Education />
         </div>
-        {/* <Skills />
+        <Skills />
         <Projects />
-        <Blog />
+        {/* <Blog />
         <Languages />
         <div className="grid grid-cols-3">
           <Achievements />

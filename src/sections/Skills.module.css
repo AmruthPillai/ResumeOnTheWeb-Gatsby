@@ -1,6 +1,6 @@
 .skill {
   border-color: rgba(128, 128, 128, 0.1);
-  @apply border pl-5 py-3 rounded-lg mr-5 mt-5;
+  @apply border pl-5 py-3 rounded-lg mt-5;
 }
 
 .skill:hover {

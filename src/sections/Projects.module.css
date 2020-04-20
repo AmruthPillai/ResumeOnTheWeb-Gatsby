@@ -1,3 +1,19 @@
 .project {
+  min-width: 280px;
+  max-width: 280px;
   @apply mr-10 rounded-lg flex flex-col;
+}
+
+@screen md {
+  .project {
+    min-width: 380px;
+    max-width: 380px;
+  }
+}
+
+@screen lg {
+  .project {
+    min-width: 340px;
+    max-width: 340px;
+  }
 }

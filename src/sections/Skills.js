@@ -30,11 +30,11 @@ const Skills = () => {
     <section id="skills">
       <Heading icon={GoTools} title="Skills" />
 
-      <div className="grid grid-cols-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {data.allSkillsJson.edges.map(({ node }, index) => (
           <div
             key={node.id}
-            className={`${styles.skill} wow fadeIn`}
+            className={`${styles.skill} md:mr-5 wow fadeIn`}
             style={{
               animationDelay: `${index * 100 + 100}ms`,
             }}
