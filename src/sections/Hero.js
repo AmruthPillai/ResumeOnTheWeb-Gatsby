@@ -47,7 +47,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="min-h-screen flex items-center container">
-      <div className="w-full grid grid-cols-1 lg:grid-cols-5 row-gap-8 lg:gap-16 justify-center lg:justify-start items-center mt-16 md:mt-0">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-5 row-gap-8 lg:gap-16 justify-center lg:justify-start items-center mt-8 md:mt-12 lg:mt-0">
         <div ref={parallaxRef} className="col-span-2">
           <div className="max-w-lg mx-auto" data-depth="0.4">
             <GatsbyImage {...data.photo.childImageSharp} />
@@ -59,14 +59,17 @@ const Hero = () => {
             {...data.logo.childImageSharp}
           />
 
-          <div className="lg:ml-4 text-center lg:text-left flex flex-col items-center lg:items-start">
+          <div className="text-center lg:text-left flex flex-col items-center lg:ml-4 lg:items-start">
             <Subtitle
               onDone={() => {
                 setShowSocial(true);
                 ReactTooltip.rebuild();
               }}
             />
-            <div className="h-6 my-6">{showSocial && <Social />}</div>
+
+            <div className="w-full md:w-auto h-6 my-6">
+              {showSocial && <Social />}
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,12 @@
 html,
 body {
+  font-size: 14px;
   font-family: "Fira Sans", sans-serif;
+}
+
+svg {
+  width: 16px;
+  height: 16px;
 }
 
 h1 {
@@ -69,4 +75,11 @@ section:hover .heading {
 .grayscale:hover {
   filter: contrast(100%) grayscale(0%);
   @apply transition-default;
+}
+
+@screen md {
+  html,
+  body {
+    font-size: 16px;
+  }
 }

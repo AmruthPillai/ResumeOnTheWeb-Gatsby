@@ -21,8 +21,8 @@ const IndexPage = () => {
     <Wrapper>
       <div className="container">
         <Hero />
-        {/* <AboutMe />
-        <div className="grid grid-cols-2">
+        <AboutMe />
+        {/* <div className="grid grid-cols-2">
           <Education />
           <Work />
         </div>

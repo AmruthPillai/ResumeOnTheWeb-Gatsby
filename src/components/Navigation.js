@@ -32,6 +32,7 @@ const Navigation = () => {
   const scrollTo = id =>
     scroller.scrollTo(id, {
       delay: 50,
+      offset: -50,
       duration: 600,
       smooth: "easeInOutCubic",
     });

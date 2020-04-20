@@ -3,12 +3,14 @@
 }
 
 .container > a {
-  @apply w-6 h-6 cursor-pointer rounded-full flex justify-center items-center pl-px pt-px;
+  width: 24px;
+  height: 24px;
+  @apply cursor-pointer rounded-full flex justify-center items-center;
 }
 
 @screen md {
   .container {
-    @apply justify-start;
+    @apply max-w-sm;
   }
 
   .container > a:first-child {
@@ -21,5 +23,11 @@
 
   .container > a:not(:first-child):not(:last-child) {
     @apply mx-4;
+  }
+}
+
+@screen lg {
+  .container {
+    @apply justify-start;
   }
 }

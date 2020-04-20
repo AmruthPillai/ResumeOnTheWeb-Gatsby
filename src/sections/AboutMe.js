@@ -24,12 +24,12 @@ const AboutMe = () => {
     <section id="about-me">
       <Heading icon={MdPerson} title="About Me" />
 
-      <div className="grid grid-cols-6 gap-12 items-center">
-        <div className="col-span-2 w-3/4 mr-auto wow fadeInLeft">
+      <div className="grid grid-cols-1 lg:grid-cols-6 gap-12 items-center">
+        <div className="hidden md:block lg:col-span-2 w-1/3 lg:w-3/4 mx-auto wow fadeInLeft">
           <GatsbyImage {...data.photo.childImageSharp} />
         </div>
         <div
-          className="text-justify col-span-4 wow fadeIn"
+          className="text-justify lg:col-span-4 wow fadeIn"
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         />
       </div>
