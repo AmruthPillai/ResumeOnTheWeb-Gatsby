@@ -24,7 +24,7 @@ const AboutMe = () => {
     <section id="about-me">
       <Heading icon={MdPerson} title="About Me" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-6 gap-12 items-center">
+      <div className="grid lg:grid-cols-6 gap-12 items-center">
         <div className="hidden md:block lg:col-span-2 w-1/3 lg:w-3/4 mx-auto wow fadeInLeft">
           <GatsbyImage {...data.photo.childImageSharp} />
         </div>

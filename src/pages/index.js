@@ -22,11 +22,11 @@ const IndexPage = () => {
       <div className="container">
         <Hero />
         <AboutMe />
-        {/* <div className="grid grid-cols-2">
-          <Education />
+        <div className="grid md:grid-cols-2">
           <Work />
+          <Education />
         </div>
-        <Skills />
+        {/* <Skills />
         <Projects />
         <Blog />
         <Languages />
