@@ -1,0 +1,45 @@
+.transition-default {
+  transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.container {
+  @apply relative inline-flex cursor-pointer;
+}
+
+.container:focus {
+  @apply outline-none;
+}
+
+.container > div:first-child {
+  @apply relative flex items-center font-semibold bg-white text-black px-8 py-2 z-20;
+  @apply transition-default;
+  top: 0;
+  left: 0;
+}
+
+.container > div:first-child svg {
+  @apply mr-3;
+}
+
+.container:hover > div:first-child {
+  @apply transition-default;
+  top: 2px;
+  left: 2px;
+}
+
+.container:hover > div:first-child svg {
+  @apply transition-default;
+  color: theme("colors.primary.600");
+}
+
+.container:active > div:first-child {
+  @apply transition-default;
+  top: 4px;
+  left: 4px;
+}
+
+.container > div:last-child {
+  @apply absolute w-full h-full border-2 border-white z-10;
+  top: 4px;
+  left: 4px;
+}

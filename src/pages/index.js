@@ -1,17 +1,18 @@
 import React from "react";
 import Wrapper from "../components/Wrapper";
 import AboutMe from "../sections/AboutMe";
+import Achievements from "../sections/Achievements";
 import Blog from "../sections/Blog";
+import Certifications from "../sections/Certifications";
 import Education from "../sections/Education";
 import Hero from "../sections/Hero";
 import Languages from "../sections/Languages";
 import Philanthropy from "../sections/Philanthropy";
+import Photography from "../sections/Photography";
 import Projects from "../sections/Projects";
+import Resume from "../sections/Resume";
 import Skills from "../sections/Skills";
 import Work from "../sections/Work";
-import Achievements from "../sections/Achievements";
-import Certifications from "../sections/Certifications";
-import Photography from "../sections/Photography";
 
 const IndexPage = () => {
   return (
@@ -33,6 +34,7 @@ const IndexPage = () => {
           <Philanthropy />
         </div>
         <Photography />
+        <Resume />
       </div>
     </Wrapper>
   );

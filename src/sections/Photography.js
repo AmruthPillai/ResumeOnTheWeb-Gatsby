@@ -3,7 +3,8 @@ import React from "react";
 import Heading from "../components/Heading";
 import { AiFillInstagram, FaLink } from "../components/Icons";
 import GatsbyImage from "gatsby-image";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaInstagram } from "react-icons/fa";
+import Button from "../components/Button";
 
 const Photography = () => {
   const data = useStaticQuery(graphql`
@@ -61,6 +62,13 @@ const Photography = () => {
           </div>
         ))}
       </div>
+
+      <Button
+        className="mt-12"
+        icon={FaInstagram}
+        title="Photos on Instagram"
+        onClick={() => window.open("https://pillai.xyz/instagram", "_blank")}
+      />
     </section>
   );
 };

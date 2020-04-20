@@ -4,6 +4,7 @@ import React from "react";
 import Heading from "../components/Heading";
 import { FaDev, FaGithub, FaLink } from "../components/Icons";
 import styles from "./Projects.module.css";
+import Button from "../components/Button";
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -97,6 +98,13 @@ const Projects = () => {
           </div>
         ))}
       </div>
+
+      <Button
+        className="mt-6"
+        icon={FaGithub}
+        title="Projects on GitHub"
+        onClick={() => window.open("https://pillai.xyz/github", "_blank")}
+      />
     </section>
   );
 };

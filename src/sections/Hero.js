@@ -37,7 +37,7 @@ const Hero = () => {
       }),
     );
     return () => {
-      parallax.destroy();
+      parallax && parallax.destroy();
     };
   }, [parallaxRef]);
 

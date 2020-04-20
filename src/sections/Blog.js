@@ -1,7 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Heading from "../components/Heading";
-import { IoIosJournal, FaLink } from "../components/Icons";
+import { IoIosJournal, FaLink, FaDev } from "../components/Icons";
+import Button from "../components/Button";
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
@@ -73,6 +74,13 @@ const Blog = () => {
           </div>
         ))}
       </div>
+
+      <Button
+        className="mt-12"
+        icon={FaDev}
+        title="Articles on DEV.to"
+        onClick={() => window.open("https://pillai.xyz/dev", "_blank")}
+      />
     </section>
   );
 };

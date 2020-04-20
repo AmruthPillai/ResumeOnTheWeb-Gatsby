@@ -6,6 +6,7 @@ import {
   FaLinkedinIn,
   FaMapSigns,
   FaTwitter,
+  FaDev,
 } from "../components/Icons";
 
 const social = [
@@ -32,6 +33,12 @@ const social = [
     icon: FaDribbble,
     link: "https://pillai.xyz/dribbble",
     class: "bg-dribbble",
+  },
+  {
+    title: "DEV Community",
+    icon: FaDev,
+    link: "https://pillai.xyz/dev",
+    class: "bg-dev",
   },
   {
     title: "Facebook",
