@@ -20,6 +20,50 @@ const Contact = () => {
     return re.test(String(email).toLowerCase());
   };
 
+  const onSubmit = async e => {
+    let formValid = true;
+    e.preventDefault();
+
+    if (!name) {
+      formValid = false;
+      const nodeName = nameRef.current;
+      nodeName.classList.add("border-red-500", "animated", "shake");
+      setTimeout(() => {
+        nodeName.classList.remove("border-red-500", "animated", "shake");
+      }, 2000);
+    }
+
+    if (!email || !isEmailValid(email)) {
+      formValid = false;
+      const nodeName = emailRef.current;
+      nodeName.classList.add("border-red-500", "animated", "shake");
+      setTimeout(() => {
+        nodeName.classList.remove("border-red-500", "animated", "shake");
+      }, 2000);
+    }
+
+    if (!message) {
+      formValid = false;
+      const nodeName = messageRef.current;
+      nodeName.classList.add("border-red-500", "animated", "shake");
+      setTimeout(() => {
+        nodeName.classList.remove("border-red-500", "animated", "shake");
+      }, 2000);
+    }
+
+    if (formValid) {
+      const url =
+        "https://us-central1-amruthpillai-resumeontheweb.cloudfunctions.net/sendEmail";
+      const opts = {
+        method: "POST",
+        body: JSON.stringify({ name, email, message }),
+      };
+
+      await fetch(url, opts);
+      setButtonText("Sent!");
+    }
+  };
+
   return (
     <section id="contact">
       <Heading icon={IoIosPaperPlane} title="Contact" />
@@ -79,54 +123,7 @@ const Contact = () => {
           className="mt-6"
           icon={IoIosPaperPlane}
           title={buttonText}
-          onClick={e => {
-            let formValid = true;
-            e.preventDefault();
-
-            if (!name) {
-              formValid = false;
-              const nodeName = nameRef.current;
-              nodeName.classList.add("border-red-500", "animated", "shake");
-              setTimeout(() => {
-                nodeName.classList.remove(
-                  "border-red-500",
-                  "animated",
-                  "shake",
-                );
-              }, 2000);
-            }
-
-            if (!email || !isEmailValid(email)) {
-              formValid = false;
-              const nodeName = emailRef.current;
-              nodeName.classList.add("border-red-500", "animated", "shake");
-              setTimeout(() => {
-                nodeName.classList.remove(
-                  "border-red-500",
-                  "animated",
-                  "shake",
-                );
-              }, 2000);
-            }
-
-            if (!message) {
-              formValid = false;
-              const nodeName = messageRef.current;
-              nodeName.classList.add("border-red-500", "animated", "shake");
-              setTimeout(() => {
-                nodeName.classList.remove(
-                  "border-red-500",
-                  "animated",
-                  "shake",
-                );
-              }, 2000);
-            }
-
-            if (formValid) {
-              console.log(name, email, message);
-              setButtonText("Sent!");
-            }
-          }}
+          onClick={onSubmit}
         />
       </form>
     </section>
