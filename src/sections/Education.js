@@ -19,7 +19,7 @@ const Education = () => {
             icon {
               childImageSharp {
                 fixed(width: 32, height: 32) {
-                  ...GatsbyImageSharpFixed_noBase64
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
@@ -34,7 +34,7 @@ const Education = () => {
       <Heading icon={MdSchool} title="Education" />
 
       <div className="flex">
-        <div className="w-1 bg-gray-500 rounded-full ml-6 opacity-25" />
+        <div className="w-1 bg-gray-500 rounded-full md:ml-6 opacity-25" />
         <div className="-ml-2">
           {data.allEducationJson.edges.map(({ node }, index) => {
             return (

@@ -1,12 +1,12 @@
-import React from "react";
-import Wrapper from "../components/Wrapper";
+import { navigate } from "gatsby";
+import { useEffect } from "react";
 
 const NotFoundPage = () => {
-  return (
-    <Wrapper>
-      <p>The page you requested for cannot be found!</p>
-    </Wrapper>
-  );
+  useEffect(() => {
+    navigate("/");
+  }, []);
+
+  return null;
 };
 
 export default NotFoundPage;

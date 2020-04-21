@@ -23,7 +23,7 @@ const Work = () => {
             icon {
               childImageSharp {
                 fixed(height: 32) {
-                  ...GatsbyImageSharpFixed_withWebp_noBase64
+                  ...GatsbyImageSharpFixed_withWebp
                 }
               }
             }
@@ -38,7 +38,7 @@ const Work = () => {
       <Heading icon={MdWork} title="Work" />
 
       <div className="flex">
-        <div className="w-1 bg-gray-500 rounded-full ml-6 opacity-25" />
+        <div className="w-1 bg-gray-500 rounded-full md:ml-6 opacity-25" />
         <div className="-ml-2">
           {data.allWorkJson.edges.map(({ node }, index) => {
             if (index >= max) return null;
