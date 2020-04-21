@@ -23,6 +23,7 @@ const Social = () => {
             data-place="bottom"
           >
             <Icon color="#FFF" size="0.9em" />
+            <span className="sr-only">{x.title}</span>
           </OutboundLink>
         );
       })}

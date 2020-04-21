@@ -56,6 +56,7 @@ const Projects = () => {
                 className="absolute w-full h-full object-cover rounded-lg hover:opacity-50 duration-200"
                 {...node.image.childImageSharp}
               />
+              <span className="sr-only">{node.title}</span>
             </OutboundLink>
             <h5 className="mt-4 font-semibold">{node.title}</h5>
             <p className="mt-2 pb-5 text-sm text-justify">{node.description}</p>
@@ -79,6 +80,7 @@ const Projects = () => {
                   data-place="bottom"
                 >
                   <FaLink />
+                  <span className="sr-only">Go to Website</span>
                 </OutboundLink>
               )}
 
@@ -92,6 +94,7 @@ const Projects = () => {
                   data-place="bottom"
                 >
                   <FaGithub />
+                  <span className="sr-only">Go to GitHub Repo</span>
                 </OutboundLink>
               )}
             </div>

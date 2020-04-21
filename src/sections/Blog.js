@@ -55,6 +55,7 @@ const Blog = () => {
                 src={node.article.social_image}
                 alt={node.article.title}
               />
+              <span className="sr-only">{node.article.title}</span>
             </OutboundLink>
             <h5 className="mt-4 w-5/6 truncate font-semibold">
               {node.article.title}
