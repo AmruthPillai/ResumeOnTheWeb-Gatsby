@@ -54,6 +54,7 @@ const Photography = () => {
               <FaLink className="absolute" color="#FFF" size="5rem" />
             </div>
             <GatsbyImage
+              loading="lazy"
               className="absolute inset-0 md:rounded-lg hover:opacity-50 duration-200"
               sizes={{
                 ...node.localFile.childImageSharp.fluid,

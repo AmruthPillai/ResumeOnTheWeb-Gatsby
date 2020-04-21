@@ -53,6 +53,7 @@ const Projects = () => {
             >
               <FaLink className="absolute" color="#FFF" size="5rem" />
               <GatsbyImage
+                loading="lazy"
                 className="absolute w-full h-full object-cover rounded-lg hover:opacity-50 duration-200"
                 {...node.image.childImageSharp}
               />
