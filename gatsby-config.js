@@ -14,7 +14,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-80892488-2",
+        trackingId: `UA-80892488-2`,
       },
     },
     `gatsby-plugin-eslint`,
@@ -26,17 +26,17 @@ module.exports = {
         short_name: `Resume on the Web`,
         start_url: `/`,
         background_color: fullConfig.theme.colors.white,
-        theme_color: fullConfig.theme.colors.teal["500"],
+        theme_color: fullConfig.theme.colors.teal[`500`],
         display: `minimal-ui`,
         icon: `src/images/icon.png`,
-        cache_busting_mode: "none",
+        cache_busting_mode: `none`,
       },
     },
     {
-      resolve: "gatsby-plugin-offline",
+      resolve: `gatsby-plugin-offline`,
       options: {
         workboxConfig: {
-          globPatterns: ["**/*"],
+          globPatterns: [`**/*`],
         },
       },
     },
@@ -47,12 +47,6 @@ module.exports = {
         display: `swap`,
       },
     },
-    {
-      resolve: `gatsby-source-dev`,
-      options: {
-        username: `amruthpillai`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -60,6 +54,12 @@ module.exports = {
       options: {
         name: `images`,
         path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    {
+      resolve: `gatsby-source-dev`,
+      options: {
+        username: `amruthpillai`,
       },
     },
     `gatsby-transformer-remark`,

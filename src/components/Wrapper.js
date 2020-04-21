@@ -22,11 +22,11 @@ const Wrapper = ({ children }) => {
 
   return (
     <div className={dark ? styles.dark : styles.light}>
-      <ReactTooltip disable={isMobile} />
       <SEO />
       <Navigation />
 
       <div className="mx-8 lg:mx-16 xl:mx-0">{children}</div>
+      <ReactTooltip disable={isMobile} />
     </div>
   );
 };
