@@ -1,14 +1,15 @@
-# Project dependencies
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+# Project Dependencies
 .cache
 node_modules
 yarn-error.log
 
-# Build directory
+# Build Directory
 /public
 
-# macOS
+# macOS Artificats
 .DS_Store
 
-# deployment-specific configs
+# Deployment-specific Configs
+.now
+.env
 now.json

@@ -52,15 +52,19 @@ const Contact = () => {
     }
 
     if (formValid) {
-      const url =
-        "http://localhost:5000/amruthpillai-resumeontheweb/us-central1/sendEmail";
+      const url = "api/sendEmail";
       const opts = {
         method: "POST",
         body: JSON.stringify({ name, email, message }),
       };
 
       fetch(url, opts)
-        .then(() => setButtonText("Message Received!"))
+        .then(() => {
+          setButtonText("Message Received!");
+          setName("");
+          setEmail("");
+          setMessage("");
+        })
         .catch(() => setButtonText("An Error Occurred!"));
     }
   };
