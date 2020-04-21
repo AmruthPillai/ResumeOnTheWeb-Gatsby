@@ -1,3 +1,4 @@
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 import React from "react";
 import social from "../data/social";
 import styles from "./Social.module.css";
@@ -10,7 +11,7 @@ const Social = () => {
         const Icon = x.icon;
 
         return (
-          <a
+          <OutboundLink
             key={x.title}
             href={x.link}
             target="_blank"
@@ -23,7 +24,7 @@ const Social = () => {
             data-place="bottom"
           >
             <Icon color="#FFF" size="0.9em" />
-          </a>
+          </OutboundLink>
         );
       })}
     </div>

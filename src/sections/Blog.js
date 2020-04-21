@@ -1,8 +1,9 @@
+import { graphql, useStaticQuery } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Heading from "../components/Heading";
-import { IoIosJournal, FaLink, FaDev } from "../components/Icons";
 import Button from "../components/Button";
+import Heading from "../components/Heading";
+import { FaDev, FaLink, IoIosJournal } from "../components/Icons";
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
@@ -42,7 +43,7 @@ const Blog = () => {
               animationDelay: `${index * 200 + 200}ms`,
             }}
           >
-            <a
+            <OutboundLink
               href={node.article.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -54,7 +55,7 @@ const Blog = () => {
                 src={node.article.social_image}
                 alt={node.article.title}
               />
-            </a>
+            </OutboundLink>
             <h5 className="mt-4 w-5/6 truncate font-semibold">
               {node.article.title}
             </h5>

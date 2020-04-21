@@ -1,10 +1,11 @@
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 import React from "react";
+import Button from "../components/Button";
 import Heading from "../components/Heading";
 import { FaDev, FaGithub, FaLink } from "../components/Icons";
 import styles from "./Projects.module.css";
-import Button from "../components/Button";
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -44,7 +45,7 @@ const Projects = () => {
               animationDelay: `${index * 300 + 300}ms`,
             }}
           >
-            <a
+            <OutboundLink
               href={node.website || node.github}
               target="_blank"
               rel="noopener noreferrer"
@@ -55,7 +56,7 @@ const Projects = () => {
                 className="absolute w-full h-full object-cover rounded-lg hover:opacity-50 duration-200"
                 {...node.image.childImageSharp}
               />
-            </a>
+            </OutboundLink>
             <h5 className="mt-4 font-semibold">{node.title}</h5>
             <p className="mt-2 pb-5 text-sm text-justify">{node.description}</p>
 
@@ -69,7 +70,7 @@ const Projects = () => {
 
             <div className="flex mt-2">
               {node.website && (
-                <a
+                <OutboundLink
                   href={node.website}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -78,11 +79,11 @@ const Projects = () => {
                   data-place="bottom"
                 >
                   <FaLink />
-                </a>
+                </OutboundLink>
               )}
 
               {node.github && (
-                <a
+                <OutboundLink
                   href={node.github}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -91,7 +92,7 @@ const Projects = () => {
                   data-place="bottom"
                 >
                   <FaGithub />
-                </a>
+                </OutboundLink>
               )}
             </div>
           </div>

@@ -11,6 +11,12 @@ module.exports = {
     author: `Amruth Pillai`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-80892488-2",
+      },
+    },
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-offline`,
