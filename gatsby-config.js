@@ -19,7 +19,6 @@ module.exports = {
     },
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -27,9 +26,18 @@ module.exports = {
         short_name: `Resume on the Web`,
         start_url: `/`,
         background_color: fullConfig.theme.colors.white,
-        theme_color: fullConfig.theme.colors.teal["400"],
+        theme_color: fullConfig.theme.colors.teal["500"],
         display: `minimal-ui`,
         icon: `src/images/icon.png`,
+        cache_busting_mode: "none",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        workboxConfig: {
+          globPatterns: ["**/*"],
+        },
       },
     },
     {
