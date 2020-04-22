@@ -2,6 +2,8 @@ html,
 body {
   font-size: 14px;
   font-family: "Fira Sans", sans-serif;
+  overflow-x: hidden;
+  position: relative;
 }
 
 h1 {
