@@ -36,7 +36,7 @@ const Languages = () => {
           {data.allLanguagesJson.edges.map(({ node }) => {
             return (
               <div key={node.id}>
-                <h1 className="text-4xl pb-2">{node.text}</h1>
+                <h2 className="text-4xl pb-2">{node.text}</h2>
                 <span className="italic">{node.translation}</span>
                 <Typist.Backspace
                   count={node.text.length + node.translation.length}

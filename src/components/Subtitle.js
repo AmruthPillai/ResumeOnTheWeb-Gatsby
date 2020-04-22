@@ -5,7 +5,7 @@ import Typist from "react-typist";
 const Subtitle = ({ onDone }) => (
   <Typist
     startDelay={500}
-    avgTypingDelay={30}
+    avgTypingDelay={20}
     cursor={{ show: false }}
     className="my-2 flex lg:h-32"
     onTypingDone={onDone}

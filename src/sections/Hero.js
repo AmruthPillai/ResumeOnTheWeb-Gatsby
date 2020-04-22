@@ -67,6 +67,11 @@ const Hero = () => {
             {...data.logo.childImageSharp}
           />
 
+          <h1 className="sr-only">
+            Amruth Pillai&apos;s Resume on the Web <br />
+            Designer, Developer, Photographer, Writer from Bangalore, India
+          </h1>
+
           <div className="text-center lg:text-left flex flex-col items-center lg:ml-4 lg:items-start">
             <Subtitle
               onDone={() => {
