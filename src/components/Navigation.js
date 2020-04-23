@@ -71,11 +71,7 @@ const Navigation = () => {
         data-tip="Go to Top"
         data-place="right"
       >
-        <GatsbyImage
-          loading="lazy"
-          className="grayscale"
-          {...data.icon.childImageSharp}
-        />
+        <GatsbyImage className="grayscale" {...data.icon.childImageSharp} />
       </div>
       <div className="hidden md:flex flex-col justify-center items-center">
         <div className={styles.menu}>

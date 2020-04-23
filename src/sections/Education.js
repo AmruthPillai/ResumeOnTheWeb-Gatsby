@@ -54,7 +54,6 @@ const Education = () => {
                 />
                 <div className="ml-8">
                   <GatsbyImage
-                    loading="lazy"
                     className="w-8 h-8"
                     {...node.icon.childImageSharp}
                   />

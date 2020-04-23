@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
+import GatsbyImage from "gatsby-image";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import React from "react";
 import Button from "../components/Button";
@@ -16,13 +17,19 @@ const Blog = () => {
           node {
             id
             article {
+              url
+              tags
               title
+              description
               published_at(fromNow: true)
               positive_reactions_count
-              description
-              tags
-              url
-              social_image
+            }
+            featuredImg {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
             }
           }
         }
@@ -50,11 +57,9 @@ const Blog = () => {
               className="w-full h-48 bg-black relative flex-center cursor-pointer rounded-lg shadow-lg"
             >
               <FaLink className="absolute" color="#FFF" size="5rem" />
-              <img
-                className="absolute w-full h-48 object-cover rounded-lg hover:opacity-50 duration-200"
-                src={node.article.social_image}
-                alt={node.article.title}
-                loading="lazy"
+              <GatsbyImage
+                className="absolute w-full h-full object-cover rounded-lg hover:opacity-50 duration-200"
+                {...node.featuredImg.childImageSharp}
               />
               <span className="sr-only">{node.article.title}</span>
             </OutboundLink>

@@ -60,7 +60,6 @@ const Work = () => {
                 />
                 <div className="ml-8">
                   <GatsbyImage
-                    loading="lazy"
                     className="w-auto h-8 object-contain"
                     {...node.icon.childImageSharp}
                   />
