@@ -9,6 +9,7 @@ module.exports = {
     title: `Amruth Pillai's Resume on the Web`,
     description: `Everyone needs their own little spot on the interwebs, and this is mine. Welcome to my resume, on the web!`,
     author: `Amruth Pillai`,
+    siteUrl: `https://amruthpillai.com`,
   },
   plugins: [
     {
