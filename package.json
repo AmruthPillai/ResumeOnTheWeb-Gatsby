@@ -7,6 +7,7 @@
     "@sendgrid/mail": "^7.0.1",
     "gatsby": "2.20.29",
     "gatsby-image": "^2.3.4",
+    "gatsby-plugin-canonical-urls": "^2.2.3",
     "gatsby-plugin-google-analytics": "^2.2.4",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "2.3.6",
@@ -14,7 +15,9 @@
     "gatsby-plugin-postcss": "2.2.3",
     "gatsby-plugin-purgecss": "5.0.0",
     "gatsby-plugin-react-helmet": "3.2.4",
+    "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "2.5.6",
+    "gatsby-plugin-sitemap": "^2.3.5",
     "gatsby-source-dev": "^0.1.4",
     "gatsby-source-filesystem": "^2.2.4",
     "gatsby-source-instagram": "^0.7.0",
@@ -64,7 +67,7 @@
     "eslint-plugin-react": "7.19.0",
     "gatsby-plugin-eslint": "2.0.8",
     "prettier": "2.0.5",
-    "tailwindcss": "1.3.4"
+    "tailwindcss": "1.3.5"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 const path = require(`path`);
-const resolveConfig = require("tailwindcss/resolveConfig");
-const tailwindConfig = require("./tailwind.config.js");
+const resolveConfig = require(`tailwindcss/resolveConfig`);
+const tailwindConfig = require(`./tailwind.config.js`);
 
 const fullConfig = resolveConfig(tailwindConfig);
 
@@ -12,9 +12,24 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://amruthpillai.com`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-80892488-2`,
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://amruthpillai.com`,
+        sitemap: `https://amruthpillai.com/sitemap.xml`,
+        policy: [{ userAgent: `*`, allow: `/` }],
       },
     },
     `gatsby-plugin-eslint`,
