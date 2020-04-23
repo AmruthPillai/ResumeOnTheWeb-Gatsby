@@ -1,3 +1,7 @@
+.container {
+  @apply flex overflow-x-auto pb-8;
+}
+
 .project {
   min-width: 280px;
   max-width: 280px;

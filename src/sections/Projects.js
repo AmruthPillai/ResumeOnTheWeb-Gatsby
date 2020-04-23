@@ -36,7 +36,7 @@ const Projects = () => {
     <section id="projects">
       <Heading icon={FaDev} title="Projects" />
 
-      <div className="flex overflow-x-auto pb-8">
+      <div className={styles.container}>
         {data.allProjectsJson.edges.map(({ node }, index) => (
           <div
             key={node.id}

@@ -52,9 +52,9 @@ const Blog = () => {
               <FaLink className="absolute" color="#FFF" size="5rem" />
               <img
                 className="absolute w-full h-48 object-cover rounded-lg hover:opacity-50 duration-200"
-                loading="lazy"
                 src={node.article.social_image}
                 alt={node.article.title}
+                loading="lazy"
               />
               <span className="sr-only">{node.article.title}</span>
             </OutboundLink>
