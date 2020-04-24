@@ -1,13 +1,5 @@
 [
   {
-    "icon": "../images/work/grover.png",
-    "title": "Grover GmbH",
-    "subtitle": "Senior Frontend Developer",
-    "period": "May '20 - current",
-    "location": "Berlin, Germany",
-    "specialization": "ReactJS, Frontend Javascript Frameworks"
-  },
-  {
     "icon": "../images/work/dhiyo.png",
     "title": "GoDhiyo Solutions Pvt. Ltd.",
     "subtitle": "Full Stack Developer and Designer",
