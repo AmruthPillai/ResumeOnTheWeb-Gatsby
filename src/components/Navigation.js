@@ -1,6 +1,7 @@
+import Tooltip from "@material-ui/core/Tooltip";
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import ThemeContext from "../context/ThemeContext";
 import sections from "../data/sections";
@@ -48,14 +49,11 @@ const Navigation = () => {
     const Icon = x.icon;
 
     return (
-      <div
-        key={x.id}
-        data-tip={x.title}
-        data-place="right"
-        onClick={() => scrollTo(x.id)}
-      >
-        <Icon />
-      </div>
+      <Tooltip title={x.title} placement="right" arrow>
+        <div key={x.id} onClick={() => scrollTo(x.id)}>
+          <Icon />
+        </div>
+      </Tooltip>
     );
   };
 
@@ -65,28 +63,27 @@ const Navigation = () => {
         isMobile ? "fadeInDown" : "fadeInLeft"
       }`}
     >
-      <div
-        className="flex-center cursor-pointer"
-        onClick={scrollToTop}
-        data-tip="Go to Top"
-        data-place="right"
-      >
-        <GatsbyImage className="grayscale" {...data.icon.childImageSharp} />
-      </div>
+      <Tooltip title="Go to Top" placement="right" arrow>
+        <div className="flex-center cursor-pointer" onClick={scrollToTop}>
+          <GatsbyImage className="grayscale" {...data.icon.childImageSharp} />
+        </div>
+      </Tooltip>
+
       <div className="hidden md:flex flex-col justify-center items-center">
         <div className={styles.menu}>
           <MdMenu />
         </div>
         <div className={styles.sectionLinks}>{sections.map(SectionLink)}</div>
       </div>
-      <div
-        className="flex-center cursor-pointer hover:text-primary-500"
-        onClick={toggleDark}
-        data-tip="Toggle Dark Mode"
-        data-place="right"
-      >
-        {dark ? <IoIosMoon /> : <IoIosSunny />}
-      </div>
+
+      <Tooltip title="Toggle Dark Mode" placement="right" arrow>
+        <div
+          className="flex-center cursor-pointer hover:text-primary-500"
+          onClick={toggleDark}
+        >
+          {dark ? <IoIosMoon /> : <IoIosSunny />}
+        </div>
+      </Tooltip>
     </div>
   );
 };

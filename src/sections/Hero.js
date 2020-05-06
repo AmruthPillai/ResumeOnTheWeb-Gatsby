@@ -2,7 +2,6 @@ import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
 import Parallax from "parallax-js";
 import React, { useRef, useState, useEffect } from "react";
-import ReactTooltip from "react-tooltip";
 import Social from "../components/Social";
 import Subtitle from "../components/Subtitle";
 
@@ -16,14 +15,14 @@ const Hero = () => {
       photo: file(relativePath: { eq: "photo.png" }) {
         childImageSharp {
           fluid(maxWidth: 512) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fluid(maxHeight: 128) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
@@ -72,12 +71,7 @@ const Hero = () => {
           </h1>
 
           <div className="text-center lg:text-left flex flex-col items-center lg:ml-4 lg:items-start">
-            <Subtitle
-              onDone={() => {
-                setShowSocial(true);
-                ReactTooltip.rebuild();
-              }}
-            />
+            <Subtitle onDone={() => setShowSocial(true)} />
 
             <div className="w-full md:w-auto h-6 my-6">
               {showSocial && <Social />}

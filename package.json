@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Amruth Pillai <im.amruth@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^4.9.13",
     "@sendgrid/mail": "^7.0.1",
     "gatsby": "2.20.31",
     "gatsby-image": "^2.3.5",
@@ -31,7 +32,6 @@
     "react-helmet": "6.0.0",
     "react-icons": "^3.10.0",
     "react-scroll": "^1.7.16",
-    "react-tooltip": "^4.2.5",
     "react-typist": "^2.0.5",
     "wowjs": "^1.1.3"
   },

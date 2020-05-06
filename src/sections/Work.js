@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
 import React, { useContext, useState } from "react";
-import ReactTooltip from "react-tooltip";
 import Heading from "../components/Heading";
 import { MdLocationOn, MdMoreHoriz, MdWork } from "../components/Icons";
 import ThemeContext from "../context/ThemeContext";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const Work = () => {
   const { dark } = useContext(ThemeContext);
@@ -60,13 +60,13 @@ const Work = () => {
                   animationDuration: `${index * 200 + 500}ms`,
                 }}
               >
-                <div
-                  className={`relative mt-3 w-3 h-3 rounded-full shadow-lg opacity-75 z-2 ${
-                    dark ? "bg-white" : "bg-primary-500"
-                  } duration-200`}
-                  data-tip={`(${node.period})`}
-                  data-place="left"
-                />
+                <Tooltip title={`(${node.period})`} placement="left">
+                  <div
+                    className={`relative mt-3 w-3 h-3 rounded-full shadow-lg opacity-75 z-2 ${
+                      dark ? "bg-white" : "bg-primary-500"
+                    } duration-200`}
+                  />
+                </Tooltip>
                 <div className="ml-8">
                   <GatsbyImage
                     className="w-auto h-8 object-contain"
@@ -94,18 +94,11 @@ const Work = () => {
       </div>
       {max <= 2 && (
         <div className="ml-12 mt-4 rounded-lg py-2 flex">
-          <div
-            className="px-4"
-            data-tip="Load More"
-            data-place="right"
-            onClick={() => {
-              setMax(6);
-              ReactTooltip.rebuild();
-              ReactTooltip.hide();
-            }}
-          >
-            <MdMoreHoriz size="1.5rem" />
-          </div>
+          <Tooltip title="Load More" placement="right">
+            <div className="px-4" onClick={() => setMax(6)}>
+              <MdMoreHoriz size="1.5rem" />
+            </div>
+          </Tooltip>
         </div>
       )}
     </section>

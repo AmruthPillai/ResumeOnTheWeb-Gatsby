@@ -1,3 +1,4 @@
+import Tooltip from "@material-ui/core/Tooltip";
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
 import React, { useContext } from "react";
@@ -45,13 +46,13 @@ const Education = () => {
                   animationDuration: `${index * 200 + 500}ms`,
                 }}
               >
-                <div
-                  className={`relative mt-3 w-3 h-3 rounded-full shadow-lg opacity-75 z-2 ${
-                    dark ? "bg-white" : "bg-primary-500"
-                  } duration-200`}
-                  data-tip={`(${node.period})`}
-                  data-place="left"
-                />
+                <Tooltip title={`(${node.period})`} placement="left">
+                  <div
+                    className={`relative mt-3 w-3 h-3 rounded-full shadow-lg opacity-75 z-2 ${
+                      dark ? "bg-white" : "bg-primary-500"
+                    } duration-200`}
+                  />
+                </Tooltip>
                 <div className="ml-8">
                   <GatsbyImage
                     className="w-8 h-8"

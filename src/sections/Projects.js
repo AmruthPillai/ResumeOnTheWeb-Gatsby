@@ -1,3 +1,4 @@
+import Tooltip from "@material-ui/core/Tooltip";
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
@@ -71,31 +72,31 @@ const Projects = () => {
 
             <div className="flex mt-2">
               {node.website && (
-                <OutboundLink
-                  href={node.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-2 mr-2"
-                  data-tip="Go to Website"
-                  data-place="bottom"
-                >
-                  <FaLink />
-                  <span className="sr-only">Go to Website</span>
-                </OutboundLink>
+                <Tooltip title="Go to Website" placement="bottom">
+                  <OutboundLink
+                    href={node.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 mr-2 hover:text-primary-500"
+                  >
+                    <FaLink />
+                    <span className="sr-only">Go to Website</span>
+                  </OutboundLink>
+                </Tooltip>
               )}
 
               {node.github && (
-                <OutboundLink
-                  href={node.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-2 mr-2"
-                  data-tip="Go to GitHub Repo"
-                  data-place="bottom"
-                >
-                  <FaGithub />
-                  <span className="sr-only">Go to GitHub Repo</span>
-                </OutboundLink>
+                <Tooltip title="Go to GitHub Repo" placement="bottom">
+                  <OutboundLink
+                    href={node.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 mr-2 hover:text-primary-500"
+                  >
+                    <FaGithub />
+                    <span className="sr-only">Go to GitHub Repo</span>
+                  </OutboundLink>
+                </Tooltip>
               )}
             </div>
           </div>
