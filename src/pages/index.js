@@ -16,6 +16,7 @@ import Resume from "../sections/Resume";
 import Skills from "../sections/Skills";
 import Work from "../sections/Work";
 import styles from "./index.module.css";
+import Design from "../sections/Design";
 
 const IndexPage = () => {
   return (
@@ -43,6 +44,7 @@ const IndexPage = () => {
           </div>
         </div>
         <Photography />
+        <Design />
         <Resume />
         <Contact />
         <Footer />

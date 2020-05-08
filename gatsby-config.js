@@ -1,8 +1,8 @@
 const path = require(`path`);
 const resolveConfig = require(`tailwindcss/resolveConfig`);
 const tailwindConfig = require(`./tailwind.config.js`);
-
 const fullConfig = resolveConfig(tailwindConfig);
+require(`dotenv`).config({ path: `.env` });
 
 module.exports = {
   siteMetadata: {
@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-80892488-2`,
+        trackingId: process.env.GA_TRACKING_ID,
       },
     },
     `gatsby-plugin-sitemap`,
@@ -61,6 +61,12 @@ module.exports = {
       options: {
         fonts: [`Fira Sans:400,600`],
         display: `swap`,
+      },
+    },
+    {
+      resolve: `gatsby-source-dribbble`,
+      options: {
+        access_token: process.env.DRIBBBLE_TOKEN,
       },
     },
     `gatsby-transformer-sharp`,
