@@ -23,7 +23,7 @@
     "gatsby-source-dev": "^0.1.4",
     "gatsby-source-dribbble": "^2.1.3",
     "gatsby-source-filesystem": "^2.3.10",
-    "gatsby-source-instagram": "^0.7.2",
+    "gatsby-source-instagram": "0.8.0-beta.0",
     "gatsby-transformer-json": "^2.4.4",
     "gatsby-transformer-remark": "^2.8.14",
     "gatsby-transformer-sharp": "^2.5.4",
