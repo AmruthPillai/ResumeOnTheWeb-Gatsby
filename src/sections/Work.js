@@ -8,7 +8,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 const Work = () => {
   const { dark } = useContext(ThemeContext);
-  const [max, setMax] = useState(2);
+  const [max, setMax] = useState(4);
   const data = useStaticQuery(graphql`
     {
       allWorkJson {
@@ -37,14 +37,14 @@ const Work = () => {
     <section id="work">
       <Heading icon={MdWork} title="Work" />
 
-      <div className="bg-primary-800 text-white rounded p-6 mb-8 lg:mr-12">
+      {/* <div className="bg-primary-800 text-white rounded p-6 mb-8 lg:mr-12">
         I had a job opportunity with a company in Berlin, but they had to
         regrettably withdraw their offer because of the ongoing economic turmoil
         due to the COVID19 Pandemic, so if you or your company is hiring, please
         contact me at{" "}
         <a href="emailto:im.amruth@gmail.com">im.amruth@gmail.com</a> or send me
         a message using the <a href="#contact">contact form</a> below.
-      </div>
+      </div> */}
 
       <div className="flex">
         <div className="w-1 bg-gray-500 rounded-full md:ml-6 opacity-25" />
@@ -92,10 +92,10 @@ const Work = () => {
           })}
         </div>
       </div>
-      {max <= 2 && (
+      {max <= 4 && (
         <div className="ml-12 mt-4 rounded-lg py-2 flex">
-          <Tooltip title="Load More" placement="right">
-            <div className="px-4" onClick={() => setMax(6)}>
+          <Tooltip title="Show More" placement="right">
+            <div className="px-4" onClick={() => setMax(10)}>
               <MdMoreHoriz size="1.5rem" />
             </div>
           </Tooltip>

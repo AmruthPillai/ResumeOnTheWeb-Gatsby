@@ -1,11 +1,19 @@
 [
   {
+    "icon": "../images/work/postman.png",
+    "title": "Postdot Technologies Pvt. Ltd.",
+    "subtitle": "Full Stack Developer",
+    "period": "Jun '20 - current",
+    "location": "Bengaluru, India",
+    "specialization": "React, Sails"
+  },
+  {
     "icon": "../images/work/dhiyo.png",
     "title": "GoDhiyo Solutions Pvt. Ltd.",
     "subtitle": "Full Stack Developer and Designer",
     "period": "Jul '18 - Mar '20",
     "location": "Bengaluru, India",
-    "specialization": "Angular, Node Python, Figma, Product Design"
+    "specialization": "Angular, Node, Python, Figma, Product Design"
   },
   {
     "icon": "../images/work/betsol.png",
