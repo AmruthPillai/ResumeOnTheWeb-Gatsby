@@ -10,5 +10,5 @@ yarn-error.log
 .DS_Store
 
 # Deployment-specific Configs
-.vercel
+.firebase
 .env
