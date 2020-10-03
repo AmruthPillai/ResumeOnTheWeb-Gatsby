@@ -1,8 +1,9 @@
 const { colors } = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: {
-    enabled: false,
+  future: {
+    purgeLayersByDefault: true,
+    removeDeprecatedGapUtilities: true,
   },
   theme: {
     container: {
@@ -22,4 +23,6 @@ module.exports = {
       },
     },
   },
+  variants: {},
+  plugins: [],
 };

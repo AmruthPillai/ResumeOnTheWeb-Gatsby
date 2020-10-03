@@ -1,13 +1,13 @@
 .layout {
-  @apply grid grid-cols-1 row-gap-16;
+  @apply grid grid-cols-1 gap-y-16;
 }
 
 .layout .work-education {
-  @apply grid grid-cols-1 row-gap-16;
+  @apply grid grid-cols-1 gap-y-16;
 }
 
 .layout .achievements-certification-philanthropy {
-  @apply grid grid-cols-1 row-gap-12;
+  @apply grid grid-cols-1 gap-y-12;
 }
 
 .layout .achievements-certification-philanthropy > div {
@@ -16,11 +16,11 @@
 
 @screen md {
   .layout {
-    @apply row-gap-24;
+    @apply gap-y-24;
   }
 
   .layout .work-education {
-    @apply grid-cols-2 row-gap-0;
+    @apply grid-cols-2 gap-y-0;
   }
 
   .layout .achievements-certification-philanthropy {

@@ -1,7 +1,4 @@
 const path = require(`path`);
-const resolveConfig = require(`tailwindcss/resolveConfig`);
-const tailwindConfig = require(`./tailwind.config.js`);
-const fullConfig = resolveConfig(tailwindConfig);
 require(`dotenv`).config({ path: `.env` });
 
 module.exports = {
@@ -41,8 +38,8 @@ module.exports = {
         name: `Amruth Pillai's Resume on the Web`,
         short_name: `Resume on the Web`,
         start_url: `/`,
-        background_color: fullConfig.theme.colors.white,
-        theme_color: fullConfig.theme.colors.white,
+        background_color: `#FFFFFF`,
+        theme_color: `#FFFFFF`,
         display: `standalone`,
         icon: `src/images/icon.png`,
         cache_busting_mode: `none`,
@@ -69,6 +66,7 @@ module.exports = {
         access_token: process.env.DRIBBBLE_TOKEN,
       },
     },
+    `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -104,25 +102,6 @@ module.exports = {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `279179176`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [
-          require(`tailwindcss`)(tailwindConfig),
-          require(`autoprefixer`),
-          ...(process.env.NODE_ENV === `production`
-            ? [require(`cssnano`)]
-            : []),
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        tailwind: true,
-        purgeOnly: [`src/css/tailwind.css`],
       },
     },
   ],
