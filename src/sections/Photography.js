@@ -40,7 +40,7 @@ const Photography = () => {
       <Heading icon={AiFillInstagram} title="Photography" />
 
       <div className={styles.container}>
-        {data.allInstaNode.edges.map(({ node }, index) => (
+        {data.allInstagramContent.edges.map(({ node }, index) => (
           <div
             key={node.id}
             className="relative cursor-pointer bg-black md:rounded-lg wow fadeIn"
@@ -55,14 +55,14 @@ const Photography = () => {
             <GatsbyImage
               className="absolute inset-0 md:rounded-lg hover:opacity-50 duration-200"
               sizes={{
-                ...node.localFile.childImageSharp.fluid,
+                ...node.localImage.childImageSharp.fluid,
                 aspectRatio: 1 / 1,
               }}
             />
-            <div className="absolute bottom-0 flex items-center md:rounded-bl-lg rounded-tr-lg bg-black text-white opacity-75 text-sm px-6 py-2">
+            {/* <div className="absolute bottom-0 flex items-center md:rounded-bl-lg rounded-tr-lg bg-black text-white opacity-75 text-sm px-6 py-2">
               <FaHeart className="mr-2" />
               <span className="font-semibold">{node.likes}</span>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

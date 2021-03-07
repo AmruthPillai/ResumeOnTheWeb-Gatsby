@@ -5,6 +5,11 @@ module.exports = {
     purgeLayersByDefault: true,
     removeDeprecatedGapUtilities: true,
   },
+  purge: [
+    './src/**/*.html',
+    './src/**/*.css',
+    './src/**/*.js',
+  ],
   theme: {
     container: {
       center: true,
