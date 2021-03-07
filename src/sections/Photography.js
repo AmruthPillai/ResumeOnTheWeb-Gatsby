@@ -5,7 +5,6 @@ import Button from "../components/Button";
 import Heading from "../components/Heading";
 import {
   AiFillInstagram,
-  FaHeart,
   FaInstagram,
   FaLink,
 } from "../components/Icons";
@@ -59,10 +58,6 @@ const Photography = () => {
                 aspectRatio: 1 / 1,
               }}
             />
-            {/* <div className="absolute bottom-0 flex items-center md:rounded-bl-lg rounded-tr-lg bg-black text-white opacity-75 text-sm px-6 py-2">
-              <FaHeart className="mr-2" />
-              <span className="font-semibold">{node.likes}</span>
-            </div> */}
           </div>
         ))}
       </div>
