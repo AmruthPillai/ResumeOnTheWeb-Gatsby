@@ -14,13 +14,12 @@ import styles from "./Photography.module.css";
 const Photography = () => {
   const data = useStaticQuery(graphql`
     {
-      allInstaNode(sort: { fields: [timestamp], order: DESC }, limit: 10) {
+      allInstagramContent(sort: { fields: [timestamp], order: DESC }, limit: 10) {
         edges {
           node {
             id
             timestamp
-            likes
-            localFile {
+            localImage {
               childImageSharp {
                 fluid(maxWidth: 320) {
                   ...GatsbyImageSharpFluid_withWebp
