@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { useFormspark } from "@formspark/use-formspark";
 import Heading from "../components/Heading";
 import { IoIosPaperPlane } from "../components/Icons";
 import Button from "../components/Button";
@@ -14,6 +15,8 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
   const [buttonText, setButtonText] = useState("Send Message");
+
+  const [submit, isSubmitting] = useFormspark({ formId: "LVr3mgSu" });
 
   const isEmailValid = email => {
     var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -52,13 +55,7 @@ const Contact = () => {
     }
 
     if (formValid) {
-      const url = "api/sendEmail";
-      const opts = {
-        method: "POST",
-        body: JSON.stringify({ name, email, message }),
-      };
-
-      fetch(url, opts)
+      submit({ name, email, message })
         .then(() => {
           setButtonText("Message Received!");
           setName("");
@@ -126,6 +123,7 @@ const Contact = () => {
         <Button
           type="submit"
           className="mt-6"
+          disabled={isSubmitting}
           icon={IoIosPaperPlane}
           title={buttonText}
           onClick={onSubmit}
