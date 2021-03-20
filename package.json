@@ -20,7 +20,7 @@
     "gatsby-plugin-robots-txt": "^1.5.5",
     "gatsby-plugin-sharp": "2.14.3",
     "gatsby-plugin-sitemap": "^2.12.0",
-    "gatsby-source-dev": "^0.1.4",
+    "gatsby-source-dev": "^0.1.1",
     "gatsby-source-dribbble": "^2.1.3",
     "gatsby-source-filesystem": "^2.11.1",
     "gatsby-source-instagram-all": "^3.0.4",

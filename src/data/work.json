@@ -1,11 +1,19 @@
 [
   {
+    "icon": "../images/work/grover.png",
+    "title": "Grover GmbH",
+    "subtitle": "Frontend Developer",
+    "period": "Apr '21 - Present",
+    "location": "Berlin, Germany",
+    "specialization": "React Native"
+  },
+  {
     "icon": "../images/work/postman.png",
     "title": "Postdot Technologies Pvt. Ltd.",
     "subtitle": "Full Stack Developer",
-    "period": "Jun '20 - current",
-    "location": "Bengaluru, India",
-    "specialization": "React, Sails"
+    "period": "Jun '20 - Mar '21",
+    "location": "Bengaluru, India (Remote)",
+    "specialization": "React, Agile Product Development, SailsJS"
   },
   {
     "icon": "../images/work/dhiyo.png",
@@ -13,7 +21,7 @@
     "subtitle": "Full Stack Developer and Designer",
     "period": "Jul '18 - Mar '20",
     "location": "Bengaluru, India",
-    "specialization": "Angular, Node, Python, Figma, Product Design"
+    "specialization": "Angular, Node, Python, Figma, Design Thinking"
   },
   {
     "icon": "../images/work/betsol.png",
