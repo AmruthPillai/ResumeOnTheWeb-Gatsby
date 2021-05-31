@@ -1,9 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import Heading from "../components/Heading";
 import { GoTools } from "../components/Icons";
-import styles from "./Skills.module.css";
+import * as styles from "./Skills.module.css";
 
 const Skills = () => {
   const data = useStaticQuery(graphql`
@@ -16,9 +16,7 @@ const Skills = () => {
             tech
             icon {
               childImageSharp {
-                fixed(width: 20, height: 20) {
-                  ...GatsbyImageSharpFixed_withWebp
-                }
+                gatsbyImageData(width: 20, height: 20, layout: FIXED)
               }
             }
           }
@@ -42,7 +40,7 @@ const Skills = () => {
             <div className="flex items-center">
               <GatsbyImage
                 className="w-5 h-5 mr-5"
-                {...node.icon.childImageSharp}
+                image={node.icon.childImageSharp.gatsbyImageData}
               />
               <div>
                 <h6 className="text-xs font-semibold leading-none">

@@ -1,23 +1,21 @@
 import Tooltip from "@material-ui/core/Tooltip";
 import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React, { useContext, useEffect, useState } from "react";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import ThemeContext from "../context/ThemeContext";
 import sections from "../data/sections";
 import { IoIosMoon, IoIosSunny, MdMenu } from "./Icons";
-import styles from "./Navigation.module.css";
+import * as styles from "./Navigation.module.css";
 
 const Navigation = () => {
   const [isMobile, setIsMobile] = useState(false);
   const { dark, toggleDark } = useContext(ThemeContext);
   const data = useStaticQuery(graphql`
-    query {
+    {
       icon: file(relativePath: { eq: "icon.png" }) {
         childImageSharp {
-          fixed(width: 32, height: 32) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
+          gatsbyImageData(width: 32, height: 32, layout: FIXED)
         }
       }
     }
@@ -65,7 +63,10 @@ const Navigation = () => {
     >
       <Tooltip title="Go to Top" placement="right" arrow>
         <div className="flex-center cursor-pointer" onClick={scrollToTop}>
-          <GatsbyImage className="grayscale" {...data.icon.childImageSharp} />
+          <GatsbyImage
+            className="grayscale"
+            image={data.icon.childImageSharp.gatsbyImageData}
+          />
         </div>
       </Tooltip>
 

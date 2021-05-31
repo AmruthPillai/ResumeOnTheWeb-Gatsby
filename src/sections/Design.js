@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
 import { FaLink, FaPaintBrush, FaDribbble } from "../components/Icons";
-import styles from "./Design.module.css";
+import * as styles from "./Design.module.css";
 
 const Design = () => {
   const data = useStaticQuery(graphql`
@@ -19,9 +19,7 @@ const Design = () => {
             localCover {
               publicURL
               childImageSharp {
-                fluid(maxWidth: 320) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 320, layout: CONSTRAINED)
               }
             }
           }
@@ -47,12 +45,9 @@ const Design = () => {
             </div>
             {node.localCover.childImageSharp !== null ? (
               <GatsbyImage
-                className="absolute inset-0 md:rounded-lg hover:opacity-50 duration-200"
                 alt={node.title}
-                sizes={{
-                  ...node.localCover.childImageSharp.fluid,
-                  aspectRatio: 1 / 1,
-                }}
+                className="absolute inset-0 md:rounded-lg hover:opacity-50 duration-200"
+                image={node.localCover.childImageSharp.gatsbyImageData}
               />
             ) : (
               <img

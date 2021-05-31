@@ -1,6 +1,6 @@
 import Tooltip from "@material-ui/core/Tooltip";
 import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React, { useContext } from "react";
 import Heading from "../components/Heading";
 import { MdSchool } from "../components/Icons";
@@ -19,9 +19,7 @@ const Education = () => {
             period
             icon {
               childImageSharp {
-                fixed(width: 32, height: 32) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(width: 32, height: 32, layout: FIXED)
               }
             }
           }
@@ -56,7 +54,7 @@ const Education = () => {
                 <div className="ml-8">
                   <GatsbyImage
                     className="w-8 h-8"
-                    {...node.icon.childImageSharp}
+                    image={node.icon.childImageSharp.gatsbyImageData}
                   />
                   <h6 className="mt-3 font-semibold">{node.title}</h6>
                   <h6 className="text-sm">{node.subtitle}</h6>

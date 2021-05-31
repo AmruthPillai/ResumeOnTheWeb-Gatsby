@@ -1,28 +1,25 @@
 import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
-import {
-  AiFillInstagram,
-  FaInstagram,
-  FaLink,
-} from "../components/Icons";
-import styles from "./Photography.module.css";
+import { AiFillInstagram, FaInstagram, FaLink } from "../components/Icons";
+import * as styles from "./Photography.module.css";
 
 const Photography = () => {
   const data = useStaticQuery(graphql`
     {
-      allInstagramContent(sort: { fields: [timestamp], order: DESC }, limit: 10) {
+      allInstagramContent(
+        sort: { fields: [timestamp], order: DESC }
+        limit: 10
+      ) {
         edges {
           node {
             id
             timestamp
             localImage {
               childImageSharp {
-                fluid(maxWidth: 320) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 320, layout: CONSTRAINED, aspectRatio: 1)
               }
             }
           }
@@ -53,10 +50,7 @@ const Photography = () => {
             </div>
             <GatsbyImage
               className="absolute inset-0 md:rounded-lg hover:opacity-50 duration-200"
-              sizes={{
-                ...node.localImage.childImageSharp.fluid,
-                aspectRatio: 1 / 1,
-              }}
+              image={node.localImage.childImageSharp.gatsbyImageData}
             />
           </div>
         ))}

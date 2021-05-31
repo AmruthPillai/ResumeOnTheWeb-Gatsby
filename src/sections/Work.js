@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React, { useContext, useState } from "react";
 import Heading from "../components/Heading";
 import { MdLocationOn, MdMoreHoriz, MdWork } from "../components/Icons";
@@ -22,9 +22,7 @@ const Work = () => {
             specialization
             icon {
               childImageSharp {
-                fixed(height: 32) {
-                  ...GatsbyImageSharpFixed_withWebp
-                }
+                gatsbyImageData(height: 32, layout: FIXED)
               }
             }
           }
@@ -61,7 +59,7 @@ const Work = () => {
                 <div className="ml-8">
                   <GatsbyImage
                     className="w-auto h-8 object-contain"
-                    {...node.icon.childImageSharp}
+                    image={node.icon.childImageSharp.gatsbyImageData}
                   />
                   <div className="mt-3 flex items-baseline">
                     <h6 className="font-semibold">{node.title}</h6>

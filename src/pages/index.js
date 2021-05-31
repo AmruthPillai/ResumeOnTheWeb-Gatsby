@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./index.module.css";
+import * as styles from "./index.module.css";
 import Footer from "../sections/Footer";
 import Wrapper from "../components/Wrapper";
 import AboutMe from "../sections/AboutMe";

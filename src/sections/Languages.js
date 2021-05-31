@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Typist from "react-typist";
 import Heading from "../components/Heading";
 import { FaSignLanguage } from "../components/Icons";
-import styles from "./Languages.module.css";
+import * as styles from "./Languages.module.css";
 
 const Languages = () => {
   const [typistIndex, setTypistIndex] = useState(0);

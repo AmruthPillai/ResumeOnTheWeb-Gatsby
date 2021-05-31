@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import Heading from "../components/Heading";
 import { MdPerson } from "../components/Icons";
@@ -9,9 +9,7 @@ const AboutMe = () => {
     {
       photo: file(relativePath: { eq: "about-me/selfie-boy.png" }) {
         childImageSharp {
-          fluid(maxWidth: 512) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(width: 512, layout: CONSTRAINED)
         }
       }
       markdownRemark(frontmatter: { id: { eq: "about-me" } }) {
@@ -26,7 +24,7 @@ const AboutMe = () => {
 
       <div className="grid lg:grid-cols-6 gap-12 items-center">
         <div className="hidden md:block lg:col-span-2 w-1/3 lg:w-3/4 mx-auto wow fadeInLeft">
-          <GatsbyImage {...data.photo.childImageSharp} />
+          <GatsbyImage image={data.photo.childImageSharp.gatsbyImageData} />
         </div>
         <div
           className="text-justify lg:col-span-4 wow fadeIn"

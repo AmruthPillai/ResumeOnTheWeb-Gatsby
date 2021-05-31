@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from "react";
 import ThemeContext from "../context/ThemeContext";
 import Navigation from "./Navigation";
 import SEO from "./SEO";
-import styles from "./Wrapper.module.css";
+import * as styles from "./Wrapper.module.css";
 
 const Wrapper = ({ children }) => {
   const { dark } = useContext(ThemeContext);

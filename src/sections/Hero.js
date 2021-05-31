@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import Parallax from "parallax-js";
 import React, { useRef, useState, useEffect } from "react";
 import Social from "../components/Social";
@@ -14,16 +14,12 @@ const Hero = () => {
     {
       photo: file(relativePath: { eq: "photo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 512) {
-            ...GatsbyImageSharpFluid_withWebp_noBase64
-          }
+          gatsbyImageData(width: 512, placeholder: NONE, layout: CONSTRAINED)
         }
       }
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fluid(maxHeight: 128) {
-            ...GatsbyImageSharpFluid_withWebp_noBase64
-          }
+          gatsbyImageData(height: 128, placeholder: NONE, layout: CONSTRAINED)
         }
       }
     }
@@ -56,13 +52,13 @@ const Hero = () => {
       <div className="w-full grid grid-cols-1 lg:grid-cols-5 gap-y-8 lg:gap-16 justify-center lg:justify-start items-center mt-8 md:mt-12 lg:mt-0">
         <div ref={parallaxRef} className="col-span-2">
           <div className="max-w-lg mx-auto" data-depth="0.4">
-            <GatsbyImage {...data.photo.childImageSharp} />
+            <GatsbyImage image={data.photo.childImageSharp.gatsbyImageData} />
           </div>
         </div>
         <div className="col-span-3">
           <GatsbyImage
             className="max-w-lg max-h-32 mx-auto lg:mx-0"
-            {...data.logo.childImageSharp}
+            image={data.logo.childImageSharp.gatsbyImageData}
           />
 
           <h1 className="sr-only">

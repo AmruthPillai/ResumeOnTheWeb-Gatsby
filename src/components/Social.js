@@ -2,7 +2,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import React from "react";
 import social from "../data/social";
-import styles from "./Social.module.css";
+import * as styles from "./Social.module.css";
 
 const Social = () => {
   return (

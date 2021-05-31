@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import Heading from "../components/Heading";
 import { AiFillSafetyCertificate, FaAngleRight } from "../components/Icons";
-import styles from "./Meta.module.css";
+import * as styles from "./Meta.module.css";
 
 const Certifications = () => {
   const data = useStaticQuery(graphql`

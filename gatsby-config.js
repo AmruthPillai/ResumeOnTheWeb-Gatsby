@@ -60,6 +60,7 @@ module.exports = {
         display: `swap`,
       },
     },
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-dribbble`,
       options: {
@@ -101,8 +102,8 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram-all`,
       options: {
-        access_token: process.env.INSTAGRAM_TOKEN
-      }
-    }
+        access_token: process.env.INSTAGRAM_TOKEN,
+      },
+    },
   ],
 };
