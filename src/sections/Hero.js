@@ -57,7 +57,7 @@ const Hero = () => {
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({
       alpha: true,
-      canvas: document.querySelector("#photograph"),
+      canvas: document.getElementById("photograph"),
     });
 
     // Base Config
@@ -95,7 +95,7 @@ const Hero = () => {
     scene.add(spotLight);
 
     // Controls
-    const controls = new OrbitControls(camera, document.documentElement);
+    const controls = new OrbitControls(camera, document.getElementById("hero"));
     controls.enableZoom = false;
     controls.enablePan = false;
 
