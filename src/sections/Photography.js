@@ -16,6 +16,7 @@ const Photography = () => {
         edges {
           node {
             id
+            permalink
             timestamp
             localImage {
               childImageSharp {
@@ -28,8 +29,7 @@ const Photography = () => {
     }
   `);
 
-  const openInstagramPost = id =>
-    window.open(`https://www.instagram.com/p/${id}`, "_blank");
+  const openInstagramPost = permalink => window.open(permalink, "_blank");
 
   return (
     <section id="photography">
@@ -43,7 +43,7 @@ const Photography = () => {
             style={{
               animationDelay: `${index * 200 + 200}ms`,
             }}
-            onClick={() => openInstagramPost(node.id)}
+            onClick={() => openInstagramPost(node.permalink)}
           >
             <div className="absolute inset-0 flex-center">
               <FaLink className="absolute" color="#FFF" size="5rem" />
