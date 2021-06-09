@@ -58,6 +58,7 @@ const Work = () => {
                 </Tooltip>
                 <div className="ml-8">
                   <GatsbyImage
+                    alt={node.title}
                     className="w-auto h-8 object-contain"
                     image={node.icon.childImageSharp.gatsbyImageData}
                   />

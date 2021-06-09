@@ -54,6 +54,7 @@ const Education = () => {
                 <div className="ml-8">
                   <GatsbyImage
                     className="w-8 h-8"
+                    alt={node.title}
                     image={node.icon.childImageSharp.gatsbyImageData}
                   />
                   <h6 className="mt-3 font-semibold">{node.title}</h6>

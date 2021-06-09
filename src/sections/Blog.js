@@ -57,6 +57,7 @@ const Blog = () => {
               <FaLink className="absolute" color="#FFF" size="5rem" />
               <GatsbyImage
                 className="absolute w-full h-full object-cover rounded-lg hover:opacity-50 duration-200"
+                alt={node.article.title}
                 image={node.featuredImg.childImageSharp.gatsbyImageData}
               />
               <span className="sr-only">{node.article.title}</span>

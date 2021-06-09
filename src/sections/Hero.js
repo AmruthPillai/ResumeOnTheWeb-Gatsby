@@ -55,14 +55,18 @@ const Hero = () => {
     // Scene, Camera and Renderer
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+    const canvas = document.getElementById("photograph");
     const renderer = new THREE.WebGLRenderer({
       alpha: true,
-      canvas: document.getElementById("photograph"),
+      canvas: canvas,
     });
 
     // Base Config
     renderer.setPixelRatio(devicePixelRatio * 2);
     renderer.setSize(512, 512);
+    canvas.style.width = "100%";
+    canvas.style.height = "auto";
+    canvas.style.maxWidth = "512px";
     camera.position.setZ(30);
 
     // Avatar
@@ -104,11 +108,13 @@ const Hero = () => {
       requestAnimationFrame(animate);
 
       const speedMultiplier = 0.5;
+      const cameraPosition = new THREE.Vector3();
+
       avatar.rotation.x += speedMultiplier * 0.005;
       avatar.rotation.y += speedMultiplier * 0.0025;
       avatar.rotation.z += speedMultiplier * 0.005;
 
-      spotLight.position.copy(camera.getWorldPosition());
+      spotLight.position.copy(camera.getWorldPosition(cameraPosition));
 
       controls.update();
       renderer.render(scene, camera);
@@ -125,7 +131,7 @@ const Hero = () => {
             <canvas id="photograph" />
           </div>
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 text-center lg:text-left">
           <GatsbyImage
             alt="Amruth Pillai"
             className="max-w-lg max-h-32 mx-auto lg:mx-0"

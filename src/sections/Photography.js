@@ -49,6 +49,7 @@ const Photography = () => {
               <FaLink className="absolute" color="#FFF" size="5rem" />
             </div>
             <GatsbyImage
+              alt="Photo from Instagram (@amruthpillai)"
               className="absolute inset-0 md:rounded-lg hover:opacity-50 duration-200"
               image={node.localImage.childImageSharp.gatsbyImageData}
             />

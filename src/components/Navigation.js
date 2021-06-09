@@ -47,8 +47,8 @@ const Navigation = () => {
     const Icon = x.icon;
 
     return (
-      <Tooltip title={x.title} placement="right" arrow>
-        <div key={x.id} onClick={() => scrollTo(x.id)}>
+      <Tooltip key={x.id} title={x.title} placement="right" arrow>
+        <div onClick={() => scrollTo(x.id)}>
           <Icon />
         </div>
       </Tooltip>
@@ -65,6 +65,7 @@ const Navigation = () => {
         <div className="flex-center cursor-pointer" onClick={scrollToTop}>
           <GatsbyImage
             className="grayscale"
+            alt="Amruth Pillai - Iconmark"
             image={data.icon.childImageSharp.gatsbyImageData}
           />
         </div>
