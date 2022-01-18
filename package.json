@@ -8,7 +8,7 @@
     "@material-ui/core": "^4.11.4",
     "@sendgrid/mail": "^7.4.4",
     "dotenv": "^10.0.0",
-    "gatsby": "^3.7.0",
+    "gatsby": "^2.0.0",
     "gatsby-codemods": "^2.7.0",
     "gatsby-image": "^3.7.0",
     "gatsby-plugin-canonical-urls": "^3.7.0",

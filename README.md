@@ -96,3 +96,23 @@ gatsby build
 ---
 
 ![Great Gatsby](https://i.imgur.com/Dr8j5iv.gif)
+
+
+## Run Application in Docker container
+
+1. Enter your google analytics tracking id that is `GA_TRACKING_ID=` in `.env` file 
+
+```
+GA_TRACKING_ID=<your-ga-tracking-id>
+```
+2. Build your docker image as named `resume`
+
+```bash
+docker run -t resume .
+```
+
+3. Run docker image to spin-up our application container
+
+```bash
+docker run resume
+```
