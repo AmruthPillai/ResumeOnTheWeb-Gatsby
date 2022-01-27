@@ -37,7 +37,7 @@
     "react-icons": "^4.2.0",
     "react-scroll": "^1.8.2",
     "react-typist": "^2.0.5",
-    "three": "^0.129.0",
+    "three": "^0.137.0",
     "wowjs": "^1.1.3"
   },
   "keywords": [
