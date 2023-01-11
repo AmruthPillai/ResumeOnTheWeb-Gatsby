@@ -27,7 +27,7 @@
     "gatsby-source-filesystem": "^3.7.0",
     "gatsby-source-instagram-all": "^4.2.0",
     "gatsby-transformer-json": "^3.7.0",
-    "gatsby-transformer-remark": "^4.4.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^3.7.0",
     "parallax-js": "^3.1.0",
     "prop-types": "15.7.2",
